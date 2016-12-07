@@ -1,0 +1,75 @@
+﻿@using System.Security.Policy
+@using webControles.Helpers
+@model webControles.Models.Views.BusquedaBandejaViewModel
+@{
+    ViewBag.Title = "Lista";
+}
+<div>
+    <center>
+        @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+    </center>
+
+    <table class="table">
+
+        <tr>
+            <th>NOMBRE</th>
+            <th>DESCRIPCIÓN</th>
+            <th># DE PÁGINAS</th>
+            @*<th>CONSULTA</th>*@
+            <th></th>
+
+        </tr>
+
+        @foreach (var item in Model.lstBusquedaBandejaModel)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre, new { @id = "textBandejaNombre" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion, new { @id = "textBandejaDescripcion" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroPaginas, new { @id = "textBandejaNumeroPaginas" })
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Consulta, new { @id = "textAreaBandejaConsulta" })
+                    </td>*@
+                <td>
+                    @Html.HiddenFor(modelItem => item.IdEncConfBandeja, new { @Id = "hdfEncConfBandejaBusqueda" })
+                    @Html.HiddenFor(modelItem => item.UUID, new { @id = "hdfEncConfBandejaUUID" })
+                    <button type="button" class="btn btn-warning" id="btnEditarBusqueda" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    <button type="button" class="btn btn-success" id="btnObtenerUUID" title="UUID" data-toggle="modal" data-target="#ObtenerUUIDModal">
+                        <span class="glyphicon glyphicon-tag"></span>
+                    </button>
+                </td>
+
+
+                <td></td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+    <center>
+        @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+    </center>
+</div>
+
+<div class="modal fade" id="ObtenerUUIDModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" align="center"> Clave UUID </h4>
+            </div>
+            <div class="modal-body" id="ObtenerUUID" align="center">
+                <p id="pModalUUID"></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+﻿
+@model webControles.Models.MenuModel
+
+@using (Html.BeginForm("Agregar", "Menu", FormMethod.Post, new { id = "formMenu" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div role="form" style="margin-bottom: 10px;">
+        <button type="button" class="btn btn-primary" id="btnNuevo"><i class="glyphicon glyphicon-plus"></i>Nuevo</button>
+        <button type="button" class="btn btn-success hide" id="btnGuardar"><i class="glyphicon glyphicon-floppy-disk"></i>Guardar</button>
+        <button type="button" class="btn btn-danger hide" id="btnCancelar"><i class="glyphicon glyphicon-chevron-left"></i>Cancelar</button>
+
+
+
+        @if (Model.IdMenu > 0)
+        {
+
+        if (!Model.Activo)
+        {
+        <button type="button" class="btn btn-info" id="btnActivar"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+        <button type="button" class="btn btn-info" id="btnDesactivar" style="display:none"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+        }
+        else
+        {
+        <button type="button" class="btn btn-info" id="btnActivar" style="display:none"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+        <button type="button" class="btn btn-info" id="btnDesactivar"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+        }
+        }
+    </div>
+<div id="divMensaje">
+</div>
+<div class="container-fluid" >
+    <div class="row" >
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.IdMenu, new { @Id = "hiddenIdMenu1" })
+        
+        <br/>
+        <div id="Paginas" class="form-group" >
+            <div>
+                @Html.Label("Url", new { @class = "control-label" })
+                @Html.RadioButtonFor(model => model.IdTipoPagina, 1, new { @Id = "txtPagina" })
+                @Html.Label("Formulario", new { @class = "control-label" })
+                @Html.RadioButtonFor(model => model.IdTipoPagina, 2, new { @Id = "txtPagina" })
+                @Html.Label("Bandeja", new { @class = "control-label" })
+                @Html.RadioButtonFor(model => model.IdTipoPagina, 3, new { @Id = "txtPagina" })
+                @Html.ValidationMessageFor(model => model.IdTipoPagina)
+            </div>
+        </div>
+
+            <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.Label("Tipo Menu", new { @class = "control-label" })
+                    @Html.DropDownListFor(model => model.IdTipoMenu,
+                    new SelectList(ViewBag.lstTipoMenu, "Llave", "Titulo"), "Seleccione",
+                    new { @class = "form-control", @id = "selTipoMenu" })
+                    @Html.ValidationMessageFor(model => model.IdTipoMenu)
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Descripcion, new { @class = "control-label " })
+                    @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control", @Id = "txtDescripcion" })
+                    @Html.ValidationMessageFor(model => model.Descripcion)
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Menu, new { @class = "control-label " })
+                    @Html.TextBoxFor(model => model.Menu, new { @class = "form-control", @Id = "txtMenu" })
+                    @Html.ValidationMessageFor(model => model.Menu)
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Url, new { @class = "control-label " })
+                    @Html.TextBoxFor(model => model.Url, new { @class = "form-control", @Id = "txtUrl" })
+                    @Html.ValidationMessageFor(model => model.Url)
+                </div>
+            </div>
+
+
+            <div class="form-group" id="divActivo" style="display:none">
+                @Html.LabelFor(model => model.Activo)
+                @Html.CheckBoxFor(model => model.Activo, new { @id = "txtActivo", @class = "form-control" })
+            </div>
+
+        </div>
+     </div>
+}
+<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+    <div class="form-group">
+
+        @Html.Label("Menu Padre", new { @class = "control-label" })
+        @Html.DropDownListFor(model => model.IdMenuPadre,
+                new SelectList(ViewBag.lstMenu, "Llave", "Titulo"), "Seleccione",
+                new { @class = "form-control", @id = "txtIdMenuPadre" })
+    </div>
+</div>
+<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+    <div class="form-group">
+        @Html.Label("Menu Iconos", new { @class = "control-label" })
+        <br />
+ 
+        <select class="selectpicker" id="selIdMenuIcono" size="1" title="">
+        </select>
+    </div>
+</div>
+
+<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+    <div class="form-group" style="display:none">
+        @Html.LabelFor(model => model.IdMenuIcono, new { @class = "control-label " })
+        @Html.TextBoxFor(model => model.IdMenuIcono, new { @class = "form-control", @Id = "txtIdMenuIcono" })
+    </div>
+</div>
+
+<div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+    <div class="form-group" style="display:none">
+        @Html.LabelFor(model => model.Icono, new { @class = "control-label " })
+        @Html.TextBoxFor(model => model.Icono, new { @class = "form-control", @Id = "txtIcono" })
+    </div>
+</div>
+
+

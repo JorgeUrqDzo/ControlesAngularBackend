@@ -1,0 +1,42 @@
+﻿@model webControles.Models.Views.ConfigurarActividadViewModel
+
+
+@Model.objPaginacionModel.TotalElementos elementos encontrados
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+<div class="panel panel-body">
+    <table class="table table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>@Html.LabelFor(model => model.objEncProcesoModel.Nombre)</th>
+                <th>@Html.LabelFor(model => model.objEncProcesoModel.Descripcion)</th>
+                <th>@Html.LabelFor(model => Model.objEncProcesoModel.Activo)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.lstEncProcesoModel)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+
+                    <td>
+                        @Html.HiddenFor(modelItem => item.IdEncProceso, new { @Id = "hdfIdEncProcesoRow" })
+                        <button class="btn btn-warning" id="btnListaEditar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>

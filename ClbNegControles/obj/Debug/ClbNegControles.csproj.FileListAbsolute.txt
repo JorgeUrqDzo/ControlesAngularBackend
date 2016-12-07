@@ -1,0 +1,42 @@
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\obj\Debug\ClbNegControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\AutoMapper.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbDatControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\Nezter.System.ComboGeneral.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbDatControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\bin\Debug\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\obj\Debug\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbNegControles\obj\Debug\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\AutoMapper.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbDatControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\Nezter.System.ComboGeneral.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbDatControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\bin\Debug\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbNegControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbNegControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\AutoMapper.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbDatControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbModControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\Nezter.System.ComboGeneral.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbUtilerias.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbDatControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbModControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\bin\Debug\ClbUtilerias.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.csprojResolveAssemblyReference.cache
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbNegControles\obj\Debug\ClbNegControles.pdb

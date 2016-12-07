@@ -1,0 +1,56 @@
+﻿@model IEnumerable<webControles.Models.BandejaFiltrosModel>
+
+@{
+    ViewBag.Title = "ListaBandejaFiltros";
+}
+<div class="PanelBandejaColumna">
+    <center>
+        @Html.Partial("Paginacion/Pagina", Model.ElementAt(0).objPaginacionModel)
+        <table id="tableBandejaColumna">
+            <tr class="superHeader">
+                <th>
+                    Filtros:
+                </th>
+                <th>
+                </th>
+                <th style="text-align:right">
+                    <button id="btnAgregar" class="btn btn-primary form-control" data-toggle="modal" data-target="#ModalAltaFiltros">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </th>
+            </tr>
+            <tr class ="headerTable">
+                <th>
+                    @Html.DisplayNameFor(model => model.Filtro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdTipoControl)
+                </th>
+                <th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr class="bodyTable">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Filtro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoControl)
+                    </td>
+                    <td>
+                        @Html.Raw(Html.ActionLink("[replacetext]", null, null, new { /**/ }, new { @class = "editarBtnBandejaColumna", data_id = item.IdDentConfBandejaFiltros}).ToHtmlString().Replace("[replacetext]", "<img src=\"" + Url.Content("~/img/Editar.png") + "\" class=\"imageTableBandejaColumna\"/ title=\"Editar\">"))
+                        @Html.Raw(Html.ActionLink("[replacetext]", null, null, new { /**/ }, new { @class = "eliminarBtnBandejaColumna", data_id = item.IdDentConfBandejaFiltros }).ToHtmlString().Replace("[replacetext]", "<img src=\"" + Url.Content("~/img/eliminar.png") + "\" class=\"imageTableBandejaColumna\"/ title=\"Eliminar\">"))
+                    </td>
+                </tr>
+            }
+
+        </table>
+        @Html.Partial("Paginacion/Pagina", Model.ElementAt(0).objPaginacionModel)
+    </center>
+</div>
+
+
+@Html.Partial("CreateBandejaFiltros", Model.ElementAt(0).bandejaFiltrosModelo)
+    
+
+

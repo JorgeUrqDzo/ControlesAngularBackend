@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Jorge\Desktop\WebSite</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>07/01/2016 17:03:59</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>10/06/2016 17:26:22</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>10/06/2016 17:26:22</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>07/01/2016 17:03:59</publishTime>
+    </File>
+    <File Include="bin/ClbDatControles.dll">
+      <publishTime>10/06/2016 17:26:15</publishTime>
+    </File>
+    <File Include="bin/ClbModControles.dll">
+      <publishTime>10/06/2016 17:26:13</publishTime>
+    </File>
+    <File Include="bin/ClbNegControles.dll">
+      <publishTime>10/06/2016 17:26:16</publishTime>
+    </File>
+    <File Include="bin/ClbUtilerias.dll">
+      <publishTime>10/06/2016 17:26:13</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Optimization.resources.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationBlocks.Data.dll">
+      <publishTime>09/06/2016 12:07:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/01/2016 17:04:03</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/01/2016 17:04:04</publishTime>
+    </File>
+    <File Include="bin/Nezter.System.ComboGeneral.dll">
+      <publishTime>09/06/2016 12:10:43</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/WebApiControles.dll">
+      <publishTime>10/06/2016 17:26:17</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/01/2016 17:04:05</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/06/2016 12:08:41</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/15/2016 09:10:07</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>10/06/2016 17:26:18</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/06/2016 12:08:42</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/06/2016 12:08:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/06/2016 17:26:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

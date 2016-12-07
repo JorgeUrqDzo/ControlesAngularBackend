@@ -1,0 +1,631 @@
+﻿@model webControles.Models.Views.ControlesViewModel
+
+<div class="row">
+    <div class="col-md-2">
+        <input id="btnNuevaSeccion" type="button" value="Nueva Seccion" class="btn btn-primary" />
+    </div>
+    <div class="col-md-1">
+        <input id="btnVistaPrevia" type="button" value="Vista Previa" class="btn btn-primary" />
+    </div>
+    <div class="col-md-1">
+        <input type="button" id="btnRelacionar" value="Relacionar" class="btn btn-warning" />
+    </div>
+</div>
+<br />
+<div class="row">
+
+    <div class="col-md-3">
+        <div id="trvControles" class="treeview">
+
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div id="divFormulario"></div>
+
+        <input type="hidden" id="tipoFormularioId" value="0" />
+
+        <div id="divSecciones">
+
+        </div>
+
+
+        @*<div class="panel panel-default">
+                <div class="panel-heading">Formulario</div>
+                <div class="panel-body">
+
+                    @Html.Partial("~/Views/Formularios/Guardar.cshtml", Model.objFormularioModel)
+                </div>
+            </div>*@
+
+        @*@if (Model.lstSeccionesModel != null) {
+                foreach(var item in Model.lstSeccionesModel)
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">@item.NombreSeccion</div>
+                        <div class="panel-body">
+                            @Html.Partial("~/Views/Secciones/Guardar.cshtml", item)
+                        </div>
+                    </div>
+
+                }
+            }*@
+
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="modalAltaFormulario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Alta de formularios</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divFormularioModal">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardarFormulario">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalAltaGrupo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Crear Nuevo Grupo</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divAltaGrupoModal">
+                    <input type="text" class="form-control" id="txtNombreGrupo" placeholder="Nombre grupo" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardarGrupo">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="modalVistaPrevia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Alta de formularios</h4>
+            </div>
+            <div class="modal-body">
+                <div id="divVistaPrevia">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRelacionesAdvertencia" tabindex="2" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Advertencia !!</h4>
+            </div>
+            <div class="modal-body">
+                <p class="lead text-center text-red text-bold" id="RelacionesMsjError"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalRelaciones" tabindex="-1" role="dialog" aria-labelledby="modalRelaciones" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>*@
+                <h4 class="modal-title">Relaciones</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                </div>
+                <table class="table table-hover" id="tablaRelaciones">
+                    <thead>
+                        <tr>
+                            <td>
+                                <label class="control-label">Seccion Padre</label>
+                                <select class="form-control" id="relTablaPadre">
+                                    <option value="0">Seleccione...</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label class="control-label">Columna PK</label>
+                                @*<select class="form-control" disabled id="relColumnaPadrePK">
+                                    <option value="0">Seleccione...</option>
+                                </select>*@
+                                <p class="text text-center" id="relColumnaPadrePK">Sin Asignar</p>
+                            </td>
+                            <td>
+                                <label class="control-label">Seccion Hijo</label>
+                                <select class="form-control" id="relTablaHijo">
+                                    <option value="0">Seleccione...</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label class="control-label">Columna FK</label>
+                                <select class="form-control" disabled id="relColumnaHijoFK">
+                                    <option value="0">Seleccione...</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label class="control-label">&nbsp;</label>
+                                <button class="btn btn-success form-control" id="btnAgregarRelacion"><span class="glyphicon glyphicon-plus"></span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <p class="lead control-label text-center">Relaciones Agregadas</p>
+                                <input type="hidden" id="hdfTotalRelaciones" value=" " />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Orden de Guardado</th>
+                            <th>Seccion Padre</th>
+                            <th>Columna PK</th>
+                            <th>Seccion Hijo</th>
+                            <th>Columna FK</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="btnCerrarRelSeccionModal">Cerrar</button>
+                @*<button type="button" class="btn btn-primary" id="btnGuardarFormulario">Guardar</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hdfIdFormularioGeneral" value="0" />
+<input type="hidden" id="hdfUUIDFormulario" value="" />
+
+@section css {
+    <link href="~/Scripts/Common/Dx/Content/dx.common.css" rel="stylesheet" />
+    <link href="~/Scripts/Common/Dx/Content/dx.light.css" rel="stylesheet" />
+}
+
+
+
+
+@section Scripts {
+
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Plugin/bootstrap-treeview/bootstrap-treeview.js"></script>
+    <script src="~/Scripts/Controllers/mensajeController.js"></script>
+    <script src="~/Scripts/Services/arbolService.js"></script>
+    <script src="~/Scripts/Controllers/arbolController.js"></script>
+    <script src="~/Scripts/Services/formulariosService.js"></script>
+    <script src="~/Scripts/Controllers/formulariosController.js"></script>
+    <script src="~/Scripts/Services/seccionService.js"></script>
+    <script src="~/Scripts/Controllers/seccionController.js"></script>
+    <script src="~/Scripts/Common/selectCommon.js"></script>
+    <script src="~/Scripts/Services/RelSeccionesService.js"></script>
+    <script src="~/Scripts/Controllers/RelSeccionesController.js"></script>
+
+
+    <link href="~/Scripts/Plugin/nestedSortable/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Plugin/nestedSortable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Plugin/nestedSortable/jquery.mjs.nestedSortable.js"></script>
+    <script src="~/Scripts/Models/enumTipoControl.js"></script>
+    <script src="~/Scripts/Services/seccionControlService.js"></script>
+    <script src="~/Scripts/Controllers/seccionControlController.js"></script>
+
+    <script src="~/Scripts/Common/messageCommon.js"></script>
+    <script src="~/Scripts/Common/Dx/Scripts/globalize.min.js"></script>
+    <script src="~/Scripts/Common/Dx/Scripts/dx.all.min.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.devextreme.js"></script>
+
+    <script>
+
+
+    (function () {
+
+
+        $(document)
+            .ready(function () {
+                cargarIdTipoFormulario();
+            });
+
+
+
+        //cargarIdTipoFormulario();
+
+
+        var objArbolController = new ArbolController('@Url.Action("Inicializar", "Arbol")',
+            '@Url.Action("ActualizarOrden", "Secciones")',
+            "trvControles",
+            function (event, data) {
+
+                //objArbolController.Inicializar();
+                //Evento que se lanza al dar clic en el arbol
+                if (data != undefined) {
+                    switch (data.idType) {
+                        case "1":
+                            //Carga secciones
+                            objSeccionController.Editar('@Url.Action("Guardar", "Secciones")',
+                                '@Url.Action("Editar", "SeccionControl")',
+                                data.href,
+                                '@Url.Action("getDBTablesName", "Secciones")',
+                                '@Url.Action("getTableColumnName", "Secciones")');
+                            break;
+                        case "0":
+                            //Carga formulario
+                            break;
+                        case "2":
+                            break;
+
+                    }
+                }
+
+            });
+
+
+        $(document)
+            .on("change",
+                "#dbTablesNames",
+                function () {
+                    objSeccionController.getTableColumnName('@Url.Action("getTableColumnName", "Secciones")');
+
+                });
+
+        var objFormularioController = new FormularioController(objArbolController);
+        var objSeccionController = new SeccionController(objArbolController);
+
+        var cargarIdTipoFormulario = function () {
+
+            if ($("#hdfIdFormularioGeneral").val() != undefined) {
+                //$("#tipoFormularioId").val($("#hdfIdFormularioGeneral").val());
+                //llamar funcion para obtener el idTipoFormulario
+                objFormularioController.getIdTipoFormulario('@Url.Action("GetIdTipoFormulario", "Formularios")', $("#hdfIdFormularioGeneral").val());
+            }
+        }
+
+        objSeccionController.InicializarEventos('@Url.Action("GenerarControles","SeccionControl")');
+        //Inicializa el alta de formulario
+        objFormularioController.InicializarFormulario('@Url.Action("Guardar", "Formularios")',
+            '@Url.Action("ObtenerUUID", "Formularios")',
+            '@ViewContext.RouteData.Values["id"]');
+
+
+        $(document)
+            .on('click',
+                '#btnAgregarGrupo',
+                function (event) {
+
+                    $('#modalAltaGrupo').modal('show');
+
+                });
+
+        $(document)
+            .on('click',
+                '#btnGuardarGrupo',
+                function (event) {
+                    objSeccionController.GuardarGrupo('@Url.Action("GuardarGrupo", "Secciones")');
+
+                });
+
+
+        $(document)
+            .on('change',
+                '#selTipoSeccion',
+                function (event) {
+
+                    if ($('#selTipoSeccion option:selected').val() == 1) {
+                        $('#txtIdGrupo').prop('disabled', true);
+                        $('#txtIdGrupo').prop('value', "");
+                        $('#txtIcono').prop('value', "");
+                        $('#txtIcono').prop('disabled', true);
+                    }
+
+                    if ($('#selTipoSeccion option:selected').val() == 2) {
+                        $('#txtIdGrupo').prop('disabled', false);
+                        $('#txtIcono').prop('disabled', false);
+                        objSeccionController.CargarGrupos($('#hdfIdFormularioGeneral').prop('value'));
+                    }
+                });
+        $(document)
+            .on("change",
+                "#selectCampoPadre",
+                function () {
+                    if ($("#selectCampoPadre").val() == "") {
+
+                    } else {
+                        var sql = $("#txtConsultaBandeja").val().toUpperCase();
+
+                        var idControl = $("#selectCampoPadre").val();
+                        var FieldValue = $("#selectCampoPadre :selected").attr("class");
+
+                        var sql2 = " WHERE " + FieldValue + " = @@" + FieldValue;
+                        console.log(sql.indexOf("WHERE"));
+
+                        if (sql.indexOf("WHERE") != -1)
+                            sql = sql.substring(sql.indexOf(" WHERE"), -1);
+
+                        $("#txtConsultaBandeja").val(sql + sql2);
+                        $("#hdfIdSeccionControlPadre").val(idControl);
+                    }
+                });
+
+
+        $(document)
+            .on('click',
+                '#btnGuardarFormulario',
+                function (event) {
+
+                    //Valida campos de formularios`
+                    objFormularioController.GuardarFormulario('@Url.Action("Guardar", "Formularios")');
+                    cargarIdTipoFormulario();
+
+                });
+
+        $(document)
+            .on('click',
+                '#btnNuevaSeccion',
+                function (event) {
+
+                    //Valida campos de formularios
+                    objSeccionController.InicializarSeccion('@Url.Action("Guardar", "Secciones")',
+                        '@Url.Action("getDBTablesName", "Secciones")');
+                });
+
+        $(document)
+            .on('click',
+                '#btnGuardarSeccion',
+                function (event) {
+
+                    //Valida campos de formularios
+                    objSeccionController.GuardarSeccion('@Url.Action("GuardarSeccion", "Secciones")',
+                        $("#hdfIdFormularioGeneral").val());
+
+                });
+
+        $(document)
+            .on('click',
+                '#btnVistaPrevia',
+                function (event) {
+
+                    //Vista previa del formulario,
+                    //1. Llamar JS para dibujar el formualrio
+                    //2. Mostrar modal de formulario
+                    var url = '@Url.Action("VistaPrevia", "Controles")' + "/" + $('#hdfUUIDFormulario').val();
+                    window.open(url, '_blank');
+
+
+                });
+
+        $(document)
+            .on('change',
+                '#selTipoControl',
+                function (event) {
+
+                    $('#divSwitch').hide();
+                    $('#divTextArea').hide();
+                    $('#divOrigenDatos').hide();
+
+                    var intIdTipoControl = $(this).val();
+                    if (intIdTipoControl != '') {
+                        switch (parseInt(intIdTipoControl)) {
+                            case enumTipoControl.List:
+                            case enumTipoControl.RadioButtonList:
+                                $('#divOrigenDatos').show();
+                                $("#divOrigenDatosDropDownPadre").removeClass('hide');
+                                $('#divOrigenDatosEstatico').hide();
+                                $('#chkBDSeccionControl').bootstrapSwitch('state', true);
+                                $('#divOrigenDatosBD').show();
+
+                                $('#chkBDSeccionControl').off('switchChange.bootstrapSwitch');
+                                $('#chkBDSeccionControl')
+                                    .on('switchChange.bootstrapSwitch',
+                                        function (event, state) {
+                                            var bolEstado = $(this).bootstrapSwitch('state')
+                                            $('#divOrigenDatosBD').hide();
+                                            $('#divOrigenDatosEstatico').hide();
+                                            if (bolEstado) {
+                                                //Si es verdadero muestra el div de origen de datos
+                                                $('#divOrigenDatosBD').show();
+
+                                            } else {
+                                                //Si no es verdadero muestra el div de valores
+                                                $('#divOrigenDatosEstatico').show();
+                                            }
+                                        });
+                                break;
+                            case enumTipoControl.CheckBoxList:
+                            case enumTipoControl.Multiseleccion:
+
+                                $('#divOrigenDatos').show();
+                                $("#divOrigenDatosDropDownPadre").addClass('hide');
+                                $('#divOrigenDatosEstatico').hide();
+                                $('#chkBDSeccionControl').bootstrapSwitch('state', true);
+                                $('#divOrigenDatosBD').show();
+
+                                $('#chkBDSeccionControl').off('switchChange.bootstrapSwitch');
+                                $('#chkBDSeccionControl')
+                                    .on('switchChange.bootstrapSwitch',
+                                        function (event, state) {
+                                            var bolEstado = $(this).bootstrapSwitch('state')
+                                            $('#divOrigenDatosBD').hide();
+                                            $('#divOrigenDatosEstatico').hide();
+                                            if (bolEstado) {
+                                                //Si es verdadero muestra el div de origen de datos
+                                                $('#divOrigenDatosBD').show();
+
+                                            } else {
+                                                //Si no es verdadero muestra el div de valores
+                                                $('#divOrigenDatosEstatico').show();
+                                            }
+                                        });
+                                break;
+                            case enumTipoControl.Switch:
+                                //nzSwitch.SetNzSwitchControl($('#chkBDSeccionControl'));
+                                $('#divSwitch').show();
+                                break;
+                            case enumTipoControl.TextArea:
+                                $('#divTextArea').show();
+                                break;
+                        }
+                    }
+
+                });
+
+        $(document)
+            .on("click",
+                "#btnRelacionar",
+                function () {
+                    var idForm = $("#hdfIdFormularioGeneral").val();
+                    objFormularioController
+                        .seccionesDeFormulario('@Url.Action("GetSeccionesDeFormulario", "Formularios")', idForm);
+
+                    //Cargar Relaciones Correspondietes al Formulario
+                    var objRelSeccionesController = new RelSeccionesController();
+                    var obj = objFormularioController.nombresSecciones;
+                    objRelSeccionesController.cargarRelaciones('@Url.Action("CargarRelaciones", "RelSecciones")', obj);
+
+                });
+
+        $(document)
+            .on("change",
+                "#relTablaPadre",
+                function () {
+                    if ($("#relTablaPadre").val() != "0") {
+                        //llenar y habilitar dropdown FK padre con campos pertenecientes al padre seleccionado
+                        var tabla = $("#relTablaPadre").val();
+                        var url = '@Url.Action("getTableColumnName","Secciones")';
+                        var tablaSelect = objFormularioController.nombresPK[tabla];
+                        objFormularioController.llenarColumnasPadreEHijo(url, tablaSelect, "relColumnaPadrePK", true);
+
+                    }
+                    else {
+                        //deshabilitar dropdown PK padre
+                        $("#relColumnaPadrePK").prop("disabled", true);
+                        $("#relColumnaPadrePK").html('');
+                        $("#relColumnaPadrePK").append('<option value="0">Seleccione...</option>');
+                    }
+
+                });
+
+        $(document)
+            .on("change",
+                "#relTablaHijo",
+                function () {
+                    if ($("#relTablaHijo").val() != "0") {
+                        //llenar y habilitar dropdown FK hijo con campos pertencientes al padre seleccionado
+                        var tabla = $("#relTablaHijo").val();
+                        var url = '@Url.Action("getTableColumnName","Secciones")';
+                        var tablaSelect = objFormularioController.nombresTablas[tabla];
+                        objFormularioController.llenarColumnasPadreEHijo(url, tablaSelect, "relColumnaHijoFK", false);
+                    }
+                    else {
+                        //desahbilitar dropdown FK hijo
+                        $("#relColumnaHijoFK").prop("disabled", true);
+                        $("#relColumnaHijoFK").html('');
+                        $("#relColumnaHijoFK").append('<option value="0">Seleccione...</option>');
+                    }
+
+                });
+        $(document)
+            .on("click",
+                "#btnAgregarRelacion",
+                function () {
+                    //agrega la relacion a la base de datos
+                    var objRelSeccionesController = new RelSeccionesController();
+                    var obj = objFormularioController.nombresSecciones;
+                    objRelSeccionesController.guardarRelacion('@Url.Action("GuardarRelacion", "RelSecciones")', obj);
+                });
+        $(document)
+            .on("click",
+                "#btnEliminarRelacion",
+                function () {
+                    var idSeccion = $(this).parent().find('input[id=hdfIdSeccion]').val();
+                    var objRelSeccionesController = new RelSeccionesController();
+                    var obj = objFormularioController.nombresSecciones;
+                    objRelSeccionesController.eliminarRelacion('@Url.Action("EliminarRelacion","RelSecciones")', idSeccion, $(this).parent().parent(), obj);
+
+
+                });
+
+        $(document)
+.on("click", "#subirOrden",
+    function () {
+        objRelSecciones = new RelSeccionesController();
+        var obj = objFormularioController.nombresSecciones;
+        var id = $(this).parent().parent().find('input[id=hdfIdSeccion]').val();
+        var ordenActual = $(this).parent().find('input[id=hdfOrdenActual]').val();
+        var ordenNuevo = parseInt(ordenActual) - 1;
+        if (parseInt(ordenActual) > 1) {
+            objRelSecciones
+                .cambiarOrden('@Url.Action("CambiarOrden", "RelSecciones")',
+                    id,
+                    ordenNuevo,
+                    obj,
+                    '@Url.Action("CargarRelaciones", "RelSecciones")');
+        }
+        else alert("estas en la primera posicion");
+    });
+
+        $(document)
+                .on("click", "#bajarOrden",
+                    function () {
+                        objRelSecciones = new RelSeccionesController();
+                        var obj = objFormularioController.nombresSecciones;
+                        var id = $(this).parent().parent().find('input[id=hdfIdSeccion]').val();
+                        var ordenActual = $(this).parent().find('input[id=hdfOrdenActual]').val();
+                        var ordenNuevo = parseInt(ordenActual) + 1;
+                        var numRegistros = $("#hdfTotalRelaciones").val();
+
+                        if (parseInt(ordenActual) < parseInt(numRegistros)) {
+                            objRelSecciones
+                                .cambiarOrden('@Url.Action("CambiarOrden", "RelSecciones")',
+                                    id,
+                                    ordenNuevo,
+                                    obj,
+                                    '@Url.Action("CargarRelaciones", "RelSecciones")');
+                        }
+
+                            else alert("estas en la ultima posicion");
+                        });
+
+            $(document)
+                .on("click",
+                    "#btnCerrarRelSeccionModal",
+                    function () {
+                        var objRelSeccionesController = new RelSeccionesController();
+                        objRelSeccionesController.resetModalAgregarRelacion();
+                    });
+
+        })();
+
+    </script>
+}

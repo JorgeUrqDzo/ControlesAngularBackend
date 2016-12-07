@@ -1,0 +1,62 @@
+﻿<div id="content">
+    <div class="panel panel-default">
+        <div class="panel-heading">Ejemplo Guardar</div>
+        <div class="panel-body">
+            <div id="divBusqueda" class="row">
+                <div class="col-xs-12 col-md-12">
+                    <div id="divVistaPrevia"></div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+
+                    <input type="button" value="Guardar" class="btn btn-success" id="btnGuardar" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section css {
+    <link href="~/Scripts/Common/Dx/Content/dx.common.css" rel="stylesheet" />
+    <link href="~/Scripts/Common/Dx/Content/dx.light.css" rel="stylesheet" />
+}
+
+
+
+
+@section Scripts {
+
+
+    <script src="~/Scripts/Common/Dx/Scripts/globalize.min.js"></script>
+    <script src="~/Scripts/Common/Dx/Scripts/dx.all.min.js"></script>como
+    <script src="~/Scripts/Common/Nz/nzControl.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.devextreme.js"></script>
+
+    <script>
+
+
+            $(document).ready(function () {
+                //var varId = '@ViewContext.RouteData.Values["id"]';
+
+                $('#TablaLoad').show();
+                $('#divVistaPrevia').nzControl({
+                    Action: 'http://localhost:64632/Api',
+                    UUID: '3f4f45ff-8b27-4ab3-82c6-becf834ce6fd',
+                    Complete: function () {
+                        $('#TablaLoad').hide();
+
+                    }
+                });
+
+                $(document).on("click", "#btnGuardar", function (event) {
+                    $('#divVistaPrevia').nzControl("Save");
+                    //window.location.replace("http://localhost:3330/Vendedores/Busqueda");
+                });
+            });
+
+
+
+
+    </script>
+}

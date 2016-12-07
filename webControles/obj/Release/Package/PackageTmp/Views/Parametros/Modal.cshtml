@@ -1,0 +1,76 @@
+﻿
+@model webControles.Models.ParametrosModel
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Alta de Parametros</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @using (Html.BeginForm("Parametros", "Parametros", FormMethod.Post, new { id = "frmParametros" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        <div class="col-lg-4">
+
+                            @Html.HiddenFor(model => model.IdDetConfBandejaLinkParametro, new { @Value = "0", id = "idForm" })
+
+                            @Html.LabelFor(model => model.Parametro)
+                            @Html.TextBoxFor(model => model.Parametro, new { @class = "form-control", @placeholder = "Nombre ", @id = "txtParametroNombre" })
+                            @Html.ValidationMessageFor(model => model.Parametro, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.LabelFor(model => model.IdTipoParametro)
+                            @Html.DropDownListFor(model => model.IdTipoParametro, new SelectList(
+                  new List<Object>{
+                       new { value = 0 , text = "Red"  },
+                       new { value = 1 , text = "Blue" },
+                       new { value = 2 , text = "Green"}
+                    },
+                  "value",
+                  "text",
+                   2), new { @class = "form-control", @placeholder = "Tipo Parametro ", @id = "txtParametroTipo" })
+                            @Html.ValidationMessageFor(model => model.IdTipoParametro, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.LabelFor(model => model.Valor)
+                            @Html.TextBoxFor(model => model.Valor, new { @class = "form-control", @placeholder = "Valor ", @id = "txtParametroValor" })
+                            @Html.ValidationMessageFor(model => model.Valor, null, new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-lg-4">
+                            <br />
+                            @Html.LabelFor(model => model.IdTipoEnvioParametro)
+                            @Html.DropDownListFor(model => model.IdTipoEnvioParametro, new SelectList(
+                  new List<Object>{
+                       new { value = 0 , text = "Red"  },
+                       new { value = 1 , text = "Blue" },
+                       new { value = 2 , text = "Green"}
+                    },
+                  "value",
+                  "text",
+                   2), new { @class = "form-control", @placeholder = "TipoEnvio ", @id = "txtParametroTipoEnvio" })
+                            @Html.ValidationMessageFor(model => model.IdTipoEnvioParametro, null, new { @class = "text-danger" })
+
+                        </div>
+                    }
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-lg-12">
+                    <button type="button" id="btnParametroAceptar" class="btn btn-primary">Aceptar</button>
+                    <button type="button" id="btnParametroCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

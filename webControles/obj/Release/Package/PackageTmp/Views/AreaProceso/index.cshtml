@@ -1,0 +1,104 @@
+﻿@model webControles.Models.Views.AreaProcesoViewModel
+@{
+    ViewBag.Title = "Area Proceso";
+}
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div id="divBusqueda" class="row">
+                <div class="col-xs-12 col-md-12">
+
+                    <div class="input-group ">
+                        @Html.TextBox("TextoBusqueda", null, new { @placeholder = "Buscar", @class = "form-control", @id = "txtTextoBusqueda" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btnBuscar" title="Buscar"> <span class="glyphicon glyphicon-search"></span> </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <div id="divLista">
+                @Html.Partial("~/Views/AreaProceso/Lista.cshtml", Model)
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div id="divPrograma">
+                @Html.Partial("~/Views/AreaProceso/Create.cshtml", Model.objAreaProcesoModel)
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="~/Scripts/Controllers/AreaProcesoController.js"></script>
+    <script src="~/Scripts/Services/AreaProcesoService.js"></script>
+    <script src="~/Scripts/Common/messageCommon.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+
+    <script>
+        (function () {
+
+            var objAreaProcesoController = new AreaProcesoController();
+
+            objAreaProcesoController.ActivarControles(false);
+
+            objAreaProcesoController.CambioPagina();
+
+            $(document).on("click", "#btnCreateGuardar", function () {
+                var url = '@Url.Action("Crear", "AreaProceso")';
+                var datos = {
+                    IdAreaProceso: $("#idCreateAreaProceso").val(),
+                    AreaProceso: $("#txtCreateAreaProceso").val(),
+                }
+                var urlBusqueda = '@Url.Action("Lista", "AreaProceso")' + '?TextoBuscar=' + $('#txtTextoBusqueda').val();
+
+                objAreaProcesoController.CrearAreaProceso(url, datos, urlBusqueda);
+            });
+
+            $(document).on("click", "#btnListaEditar", function () {
+                var url = '@Url.Action("CargarXId", "AreaProceso")';
+                var datos = {
+                    "IdAreaProceso": $(this).parent().find('input[id=hdfIdAreaProcesoRow]').val()
+                };
+                objAreaProcesoController.CargarXId(url, datos);
+                $("#btnCreateActivar").show();
+            });
+
+            $(document).on("click", "#btnCreateNuevo", function () {
+                objAreaProcesoController.ActivarControles(true);
+            });
+
+            $(document).on("click", "#btnCreateCancelar", function () {
+                objAreaProcesoController.ActivarControles(false);
+                objAreaProcesoController.ControlesReset();
+            });
+
+            $(document).on("click", "#btnCreateActivar", function () {
+                objAreaProcesoController.Activar($("#chkCreateActivo").prop("checked"));
+                var url = '@Url.Action("ActualizarEstado", "AreaProceso")';
+                var datos = {
+                    IdAreaProceso: $("#idCreateAreaProceso").val(),
+                    Activo: $("#chkCreateActivo").prop("checked")
+                }
+                var urlBusqueda = '@Url.Action("Lista", "AreaProceso")' + '?TextoBuscar=' + $('#txtTextoBusqueda').val();
+
+                objAreaProcesoController.ActualizarEstado(url, datos, urlBusqueda);
+            });
+
+            $(document).on('click', '#btnBuscar', function () {
+                //obtiene la url para cargar el listado, en esta url se le suma el Filtro de la Busqueda
+                var url = '@Url.Action("Lista", "AreaProceso")' + '?TextoBuscar=' + $('#txtTextoBusqueda').val();
+                objAreaProcesoController.Buscar(url);
+            });
+
+        })();
+    </script>
+}

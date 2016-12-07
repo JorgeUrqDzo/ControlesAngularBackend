@@ -1,0 +1,186 @@
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\obj\Debug\webControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\webControles.dll.config
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\webControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Antlr3.Runtime.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\AutoMapper.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbDatControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Newtonsoft.Json.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Helpers.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Mvc.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Optimization.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\WebGrease.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Nezter.System.ComboGeneral.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbDatControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\AutoMapper.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Helpers.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Mvc.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Optimization.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Newtonsoft.Json.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\Antlr3.Runtime.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\obj\Debug\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\webControles\obj\Debug\webControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\webControles.dll.config
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\webControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Antlr3.Runtime.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\AutoMapper.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbDatControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Newtonsoft.Json.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Helpers.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Mvc.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Optimization.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\WebGrease.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Nezter.System.ComboGeneral.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbDatControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\AutoMapper.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Helpers.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Mvc.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Optimization.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Newtonsoft.Json.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\Antlr3.Runtime.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\obj\Debug\webControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\obj\Debug\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\webControles\webControles\obj\Debug\webControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\webControles.dll.config
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\webControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Antlr3.Runtime.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\AutoMapper.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbDatControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbNegControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Newtonsoft.Json.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Helpers.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Mvc.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Optimization.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\WebGrease.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Nezter.System.ComboGeneral.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbDatControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbNegControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\AutoMapper.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Helpers.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Mvc.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Optimization.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Newtonsoft.Json.xml
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\Antlr3.Runtime.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\obj\Debug\webControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\obj\Debug\webControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\webControles\obj\Debug\webControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\webControles.dll.config
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\webControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\webControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Antlr3.Runtime.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\AutoMapper.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbDatControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbModControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbNegControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbUtilerias.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Newtonsoft.Json.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Helpers.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Mvc.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Optimization.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Razor.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.Razor.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\WebGrease.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Microsoft.ApplicationBlocks.Data.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Nezter.System.ComboGeneral.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbDatControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbModControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbNegControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\ClbUtilerias.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\AutoMapper.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Helpers.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Mvc.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Optimization.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Razor.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.WebPages.Razor.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Newtonsoft.Json.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\Antlr3.Runtime.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.Razor.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\obj\Debug\webControles.csprojResolveAssemblyReference.cache
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\obj\Debug\webControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\obj\Debug\webControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Net.Http.Formatting.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Http.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Http.WebHost.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Net.Http.Formatting.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Http.xml
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\webControles\bin\System.Web.Http.WebHost.xml

@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Actividades";
+}
+
+
+
+<div class="content">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <input type="button" value="Aprobar" class="btn btn-success" id="btnAprobar"  />
+                    <input type="button" value="Rechazar" class="btn btn-danger" id="btnRechazar" />
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script src="~/Scripts/Common/Nz/nzActividades.js"></script>
+
+    <script>
+
+
+        $(document).ready(function () {
+
+            var intIdTablaDocumento = '@Request.Params["IdTablaDocumento"]';
+            var intIdDocumento = '@Request.Params["IdVendedor"]';
+            var intIdEncActividad = '@Request.Params["IdEncActividad"]';
+            var intIdEncProceso = '@Request.Params["IdEncProceso"]';
+
+            $(document).on("click", "#btnAprobar", function (event) {
+                
+                Aprobar(true);
+
+            });
+            $(document).on("click", "#btnRechazar", function (event) {
+
+                Aprobar(false);
+
+            });
+
+
+            var Aprobar = function (bolAprobado) {
+               
+
+
+                var objNzActividades = new nzActividades();
+                objNzActividades.SiguienteActividad('http://localhost:64632/Api',
+                    intIdTablaDocumento, intIdDocumento, intIdEncActividad, intIdEncProceso, bolAprobado, function () {
+                        window.history.back();
+
+                       // window.location.replace("http://localhost:3330/Vendedores/Busqueda");
+                    });
+
+            }
+
+        });
+
+
+
+    </script>
+}

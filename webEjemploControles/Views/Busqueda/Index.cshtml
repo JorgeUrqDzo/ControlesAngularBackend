@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Busqueda";
+}
+
+<div class="content">
+    <div class="panel">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="divBusqueda"></div>
+                    <input type="button" class="btn btn-success" value="Buscar" id="btnBuscar" />
+                    <br /><br />
+                    <div id="gridContainer"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section css {
+    <link href="~/Scripts/Common/Dx/Content/dx.common.css" rel="stylesheet" />
+    <link href="~/Scripts/Common/Dx/Content/dx.light.css" rel="stylesheet" />
+}
+
+
+
+
+@section Scripts{
+    <!-- plugin nzBandeja -->
+    <script src="~/Scripts/Common/Nz/nzBandejaPaginacion.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.Grid.js"></script>
+
+
+
+    <script src="~/Scripts/Common/Dx/Scripts/globalize.min.js"></script>
+    <script src="~/Scripts/Common/Dx/Scripts/dx.all.min.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.devextreme.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            var UUIDBusqueda = '@Request.Params["UUIDBusqueda"]';
+            var UUIDFiltros = '@Request.Params["UUIDFiltros"]';
+
+                var varId = '@ViewContext.RouteData.Values["id"]';
+
+                $('#TablaLoad').show();
+
+                        $('#gridContainer').nzBandeja({
+                            Action: 'http://localhost:64632/api',
+                            UUID: UUIDBusqueda,
+                            ContenedorFiltros: "divBusqueda",
+                            Complete: function () {
+                                $('#TablaLoad').hide();
+                            }
+                        });
+
+
+            $(document).on("click", "#btnBuscar", function (event) {
+                $('#TablaLoad').show();
+                $('#gridContainer').nzBandeja("Search");
+
+
+            });
+
+        });
+    </script>
+}

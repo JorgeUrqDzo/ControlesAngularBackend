@@ -1,0 +1,99 @@
+﻿@model webControles.Models.ActividadModel
+
+@using (Html.BeginForm("Agregar", "Actividad", FormMethod.Post, new {id = "formActividad"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div role="form" style="margin-bottom: 10px;">
+        <button type="button" class="btn btn-primary" id="btnNuevo"><i class="glyphicon glyphicon-plus"></i>Nuevo</button>
+        <button type="button" class="btn btn-success hide"  id="btnGuardar"><i class="glyphicon glyphicon-floppy-disk"></i>Guardar</button>
+        <button type="button" class="btn btn-danger hide" id="btnCancelar"><i class="glyphicon glyphicon-chevron-left"></i>Cancelar</button>
+
+
+        @if (Model.IdEncActividad > 0)
+        {
+
+        if (!Model.Activo)
+        {
+
+        <button type="button" class="btn btn-info" id="btnActivar"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+        <button type="button" class="btn btn-info" id="btnDesactivar" style="display:none"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+        }
+        else
+        {
+
+        <button type="button" class="btn btn-info" id="btnActivar" style="display:none"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+        <button type="button" class="btn btn-info" id="btnDesactivar"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+
+        }
+        }
+    </div>
+
+<div id="divMensaje">   
+</div>
+<div class="container-fluid">
+    <div class="row">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.IdEncActividad, new { @Id = "hiddenIdActividad1" })
+        
+
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group" >
+                @Html.Label("Tipo Proceso", new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.objActividadModel.IdTipoProceso,
+            new SelectList(ViewBag.lstTipoProceso, "Llave", "Titulo"), "Seleccione",
+            new { @class = "form-control", @id = "selTipoProceso" })
+                @Html.ValidationMessageFor(model => model.objActividadModel.IdTipoProceso)
+
+            </div>           
+        </div>
+
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Orden, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Orden, new { @class = "form-control", @Id = "txtOrden" })
+                @Html.ValidationMessageFor(model => model.Orden)
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Actividad, new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.Actividad, new { @class = "form-control", @Id = "txtActividad" })
+                @Html.ValidationMessageFor(model => model.Actividad)
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.Label("Url de Actividad", new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.UrlActividad, new { @class = "form-control", @Id = "txtUrlActividad" })
+                @Html.ValidationMessageFor(model => model.UrlActividad)
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.Label("Destino al terminar", new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.UrlDestinoAlTerminar, new { @class = "form-control", @Id = "txtUrlDestino" })
+                @Html.ValidationMessageFor(model => model.UrlDestinoAlTerminar)
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.Label("Tiempo Promedio", new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.TiempoPromedioObjetivo, new { @class = "form-control", @Id = "txtTiempoPromedio" })
+                @Html.ValidationMessageFor(model => model.TiempoPromedioObjetivo)
+            </div>
+        </div>
+
+        <div class="form-group" id="divActivo" style="display:none">
+            @Html.LabelFor(model => model.Activo)
+            @Html.CheckBoxFor(model => model.Activo, new { @id = "txtActivo", @class = "form-control" })
+        </div>
+    </div>
+</div>
+
+} 
+

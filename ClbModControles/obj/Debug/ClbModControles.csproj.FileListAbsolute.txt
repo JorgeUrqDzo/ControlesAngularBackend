@@ -1,0 +1,15 @@
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbModControles\bin\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbModControles\bin\Debug\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbModControles\obj\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbModControles\obj\Debug\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\Controles\src\webControles\ClbModControles\obj\Debug\ClbModControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbModControles\bin\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbModControles\bin\Debug\ClbModControles.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbModControles\bin\Debug\ClbModControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbModControles\bin\Debug\ClbModControles.pdb
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.csprojResolveAssemblyReference.cache
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.dll
+C:\Users\jorge.urquijo\Desktop\Proyecto\ControlesAngularASP.NET\src\ControlesAngular\ClbModControles\obj\Debug\ClbModControles.pdb

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div id="divBusqueda"></div>
+        <input type="button" class="btn btn-success" value="Buscar" id="btnBuscar"/> 
+        <br /><br />
+        <div id="gridContainer"></div>
+    </div>
+</div>
+
+@section css {
+    <link href="~/Scripts/Common/Dx/Content/dx.common.css" rel="stylesheet" />
+    <link href="~/Scripts/Common/Dx/Content/dx.light.css" rel="stylesheet" />
+}
+
+
+
+
+@section Scripts{
+    <!-- plugin nzBandeja -->
+    <script src="~/Scripts/Common/Nz/nzBandejaPaginacion.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.Grid.js"></script>
+
+
+
+
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Plugin/bootstrap-treeview/bootstrap-treeview.js"></script>
+    <script src="~/Scripts/Controllers/mensajeController.js"></script>
+    <script src="~/Scripts/Services/arbolService.js"></script>
+    <script src="~/Scripts/Controllers/arbolController.js"></script>
+    <script src="~/Scripts/Services/formulariosService.js"></script>
+    <script src="~/Scripts/Controllers/formulariosController.js"></script>
+    <script src="~/Scripts/Services/seccionService.js"></script>
+    <script src="~/Scripts/Controllers/seccionController.js"></script>
+    <script src="~/Scripts/Common/selectCommon.js"></script>
+
+
+    <script src="~/Scripts/Services/seccionControlService.js"></script>
+    <script src="~/Scripts/Controllers/seccionControlController.js"></script>
+
+
+    <script src="~/Scripts/Common/Dx/Scripts/globalize.min.js"></script>
+    <script src="~/Scripts/Common/Dx/Scripts/dx.all.min.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.js"></script>
+    <script src="~/Scripts/Common/Nz/nzControl.devextreme.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var filtrosBusqueda = [
+                { nomnbre: 'TextoBuscar', valor: '' }
+            ];
+
+            $('#gridContainer').nzBandeja({ Action: 'http://localhost:64632/api/grid/GetBandeja', UUID: "98b57398-3492-4c0e-b22f-ca2f119b1af9", filtros: filtrosBusqueda, RegistrosPorPagina: "10" });
+
+
+
+            var varId = '@ViewContext.RouteData.Values["id"]';
+
+            $('#TablaLoad').show();
+            $('#divBusqueda').nzControl({
+                Action: 'http://localhost:64632/Api/Controles',
+                UUID: '2957732d-06de-4223-a5d3-91ebf7a87c27',
+                Complete: function () {
+                    $('#TablaLoad').hide();
+                }
+            });
+
+            $(document).on("click", "#btnBuscar", function (event) {
+
+                var filtrosBusqueda = $('#divBusqueda').nzControl("Get");
+
+                $('#gridContainer').nzBandeja({ Action: 'http://localhost:64632/api/grid/GetBandeja', UUID: "98b57398-3492-4c0e-b22f-ca2f119b1af9", filtros: filtrosBusqueda, RegistrosPorPagina: "10" });
+            });
+        });
+    </script>
+}

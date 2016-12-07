@@ -1,0 +1,240 @@
+﻿@model webControles.Models.Views.SeccionControlViewModel
+
+@using (Html.BeginForm("Index", "SeccionControl", FormMethod.Post, new { enctype = "multipart/form-data", id = "formSeccionControl" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.Nombre)
+                @Html.TextBoxFor(model => model.ObjSeccionControl.Nombre, new { @class = "form-control", @id = "txtNombreSeccionControl" })
+                @Html.ValidationMessageFor(model => model.ObjSeccionControl.Nombre)
+                @Html.HiddenFor(model => model.ObjSeccionControl.IdSeccionControl, new { @id = "hdfIdSeccionControl" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.IdTipoControl)
+                @Html.DropDownListFor(model => model.ObjSeccionControl.IdTipoControl,
+                    new SelectList(ViewBag.lstTipoControl, "Llave", "Titulo"), "Seleccione",
+                    new { @class = "form-control", @Id = "selTipoControl" })
+                @Html.ValidationMessageFor(model => model.ObjSeccionControl.IdTipoControl)
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.Longitud)
+                @Html.TextBoxFor(model => model.ObjSeccionControl.Longitud, new { @class = "form-control", @id = "txtLongitudSeccionControl", @type = "number" })
+                @*@Html.ValidationMessageFor(model => model.ObjSeccionControl.Longitud)*@
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.ValorDefault)
+                @Html.TextBoxFor(model => model.ObjSeccionControl.ValorDefault, new { @class = "form-control", @id = "txtValorDefaultSeccionControl" })
+                @Html.ValidationMessageFor(model => model.ObjSeccionControl.ValorDefault)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.Caption)
+                @Html.TextBoxFor(model => model.ObjSeccionControl.Caption, new { @class = "form-control", @id = "txtCaptionSeccionControl" })
+                @Html.ValidationMessageFor(model => model.ObjSeccionControl.Caption)
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.HelpText)
+                @Html.TextBoxFor(model => model.ObjSeccionControl.HelpText, new { @class = "form-control", @id = "txtHelpTextSeccionControl" })
+                @Html.ValidationMessageFor(model => model.ObjSeccionControl.HelpText)
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ObjSeccionControl.Requerido)
+                <div class="checkbox">
+                    @Html.CheckBoxFor(model => model.ObjSeccionControl.Requerido, new { @id = "chkRequeridoSeccionControl" })
+                    @Html.ValidationMessageFor(model => model.ObjSeccionControl.Requerido)
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div id="valorIdTipoFormulario"></div>
+            <br />
+            @*<label class="control-label">Columnas de Tabla Seleccionada:</label>
+                <select id="dbColumnNames" class="form-control">
+                    <option value="Sin Asignar">(Ninguna)</option>
+                </select>*@
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-9 col-md-3">
+            <input class="btn btn-primary form-control" type="button" id="idBtnGenerarControles" value="Generar Controles" disabled/>
+        </div>
+    </div>
+    <div class="row"><br /></div>
+    <div id="divSwitch" style="display: none;">
+        <div class="panel panel-default">
+            <div class="panel-heading">Configuración de Switch</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ObjSeccionControl.TextoSeleccionado)
+                            @Html.TextBoxFor(model => model.ObjSeccionControl.TextoSeleccionado, new { @class = "form-control", @id = "txtTextoSeleccionadoSeccionControl" })
+                            @Html.ValidationMessageFor(model => model.ObjSeccionControl.TextoSeleccionado)
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ObjSeccionControl.TextoNoSeleccionado)
+                            @Html.TextBoxFor(model => model.ObjSeccionControl.TextoNoSeleccionado, new { @class = "form-control", @id = "txtTextoNoSeleccionadoSeccionControl" })
+                            @Html.ValidationMessageFor(model => model.ObjSeccionControl.TextoNoSeleccionado)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divTextArea" style="display: none;">
+        <div class="panel panel-default">
+            <div class="panel-heading">Configuración de Text Area</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ObjSeccionControl.TextAreaHeight)
+                            @Html.TextBoxFor(model => model.ObjSeccionControl.TextAreaHeight, new { @class = "form-control", @id = "txtTextAreaHeightSeccionControl" })
+                            @Html.ValidationMessageFor(model => model.ObjSeccionControl.TextAreaHeight)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="divOrigenDatos" style="display: none;">
+        <div class="panel panel-default">
+            <div class="panel-heading">Configuración de origen de datos</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Obtener Informacion de Base de datos:</label>
+                        <div class="checkbox">
+                            <input type="checkbox" id="chkBDSeccionControl" />
+                        </div>
+                    </div>
+                </div>
+                <div id="divOrigenDatosBD" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Consulta:</label>
+                                <textarea id="txtConsultaBandeja" cols="6" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div id="divOrigenDatosDropDownPadre">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Campo Padre: </label>
+                                    <select id="selectCampoPadre" class="form-control">
+                                        <option>(Ninguno)</option>
+                                    </select>
+                                    <input type="hidden" id="hdfIdSeccionControlPadre" value="0" />
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Campo Texto:</label>
+                                <input type="text" class="form-control" id="txtCampoTexto" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Campo Valor:</label>
+                                <input type="text" class="form-control" id="txtCampoValor" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="divOrigenDatosEstatico" style="display: none;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Informacion a mostrar:</label>
+                                <textarea id="txtCapturaValores" rows="6" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="button" value="Agregar" id="btnAgregarControl" class="btn btn-default" />
+                <input type="button" value="Cancelar" id="btnCancelarControl" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    <div id="divSeccionControl">
+        <table class="table table-hover" id="tbSeccionControl">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Titulo</th>
+                    <th>Tipo Control</th>
+                    <th>Valor Default</th>
+                    <th>Tamaño</th>
+                    <th>Obligatorio</th>
+                    @*<th>IdPadre</th>*@
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <div class="modal fade" id="modalSeccionControl" tabindex="-1" role="dialog" aria-labelledby="modalSeccionControlLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Confirmación</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>¿Deseas eliminar el registro?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnEliminarSeccionControl">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalControlesSugeridos" tabindex="-1" role="dialog" aria-labelledby="modalControlesSugeridosLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Confirmación</h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Los controles agregados se eliminaran para agregar los controles nuevos ¿Desea Continuar?</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" id="btnConfirmacionControlesSugeridos">Si</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@*<button type="button" class="btn btn-primary" id="btnGuardarGeneral">Guardar</button>*@

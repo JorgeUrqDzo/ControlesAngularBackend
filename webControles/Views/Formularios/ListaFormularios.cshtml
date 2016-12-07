@@ -1,0 +1,93 @@
+﻿@*@model webControles.Models.Views.FormularioViewModel*@
+ @*@model IEnumerable<webControles.Models.FormularioModel>*@ 
+@model webControles.Models.Views.FormularioViewModel
+
+@{
+    ViewBag.Title = "ListaFormularios";
+}
+
+@*@Model.objPaginacionModel.TotalElementos elementos encontrados
+
+@Html.Partial("~/Views/Paginacion/Pagina.cshtml", Model.objPaginacionModel)*@
+
+
+<h2>Catálogo de Formularios</h2>
+<div class="box box-primary" >
+    <h4>Lista de formularios</h4>
+    <div class="row">
+        <table class="table table-bordered text-center">
+            <tbody>
+                <tr>
+                    <th class="hidden-xs" scope="col">
+                        #
+                    </th>
+                    <th class="text-center" scope="col">
+                        Formulario
+                    </th>
+                    <th scope="col">
+                        Descripción
+                    </th>
+                    <th scope="col">
+                        Estatus
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model.lstFormularioModel)
+                {
+                    <tr>
+                        <td class="hidden-xs">@item.IdFormulario</td>
+                        <td class="text-left">
+                            @Html.ActionLink(item.Nombre, "Update", "Formularios", new { id = item.IdFormulario }, null)
+                        </td>
+                        <td>
+                            @item.Descripcion
+                        </td>
+                        @if (@item.Activo)
+                        {
+                            <td>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="inlineRadioOptions1" id="btnAsistencia1" value="option1" checked="checked">
+                                    <span id="Asistencia1" title="Formulario Activo" class="label label-success">
+                                        Formulario Activo
+                                    </span>
+                                </label>
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                <label class="radio-inline">
+                                    <input type="checkbox" name="inlineRadioOptions1" id="btnAsistencia1" value="option1" checked="checked">
+                                    <span id="Asistencia1" title="Formulario Inactivo" class="label label-danger">
+                                        Formulario Inactivo
+                                    </span>
+                                </label>
+                            </td>
+                        }
+                        <td>
+                            <button id="btnMasDatos" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Desactivar Formulario">
+                                <span class="fa fa-times" aria-hidden="true"></span>
+                            </button>
+                            <button id="btnMasDatos" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Vista previa">
+                                <span class="fa fa-sort-desc" aria-hidden="true"></span>
+                            </button>
+                            <button id="btnMasDatos" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Generar Codigo">
+                                <span class="fa fa-cog" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip({ 'placement': 'bottom' });
+      });
+    </script>
+    
+}

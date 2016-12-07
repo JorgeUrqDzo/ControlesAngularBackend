@@ -1,0 +1,27 @@
+﻿@model webControles.Models.EncProcesoModel
+@using (Html.BeginForm("Guardar","ConfigurarActividad", FormMethod.Post, new { @id = "procesoForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="panel panel-body">
+        <div class="form-group">
+            <div class="row">
+                @Html.LabelFor(model => model.Nombre, null, new {@class = "control-label"}):
+                @Html.TextBoxFor(model => model.Nombre, new {@id = "txtProcesoNombre", @class = "form-control", @Placeholder = "Nombre"})
+                @*<input class="form-control" type="text" placeholder="Nombre" id="txtProcesoNombre"/>*@
+                @Html.ValidationMessageFor(model => model.Nombre, null, new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                @Html.LabelFor(model => model.Descripcion, null, new {@class = "control-label"}):
+                @Html.TextAreaFor(model => model.Descripcion, 5, 4, new {@class = "form-control", @id = "txtProcesoDescripcion"})
+                @*<textarea class="form-control" cols="5" rows="4" id="txtProcesoDescripcion"></textarea>*@
+                @Html.ValidationMessageFor(model => model.Descripcion, null, new {@class = "text-danger"})
+
+                <input type="hidden" id="idEncProceso"/>
+            </div>
+        </div>
+    </div>
+
+}

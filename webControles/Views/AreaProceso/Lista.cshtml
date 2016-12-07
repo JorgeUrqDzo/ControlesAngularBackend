@@ -1,0 +1,48 @@
+﻿@model webControles.Models.Views.AreaProcesoViewModel
+
+
+@Model.objPaginacionModel.TotalElementos elementos encontrados
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+
+
+
+
+
+<div class="panel panel-body">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.objAreaProcesoModel.AreaProceso)</th>
+                <th>@Html.DisplayNameFor(model => model.objAreaProcesoModel.Activo)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.lstAreaProcesoModel)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AreaProceso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Activo)
+                    </td>
+
+                    <td>
+                        @Html.HiddenFor(modelItem => item.IdAreaProceso, new { @Id = "hdfIdAreaProcesoRow" })
+                        <button class="btn btn-warning" id="btnListaEditar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+

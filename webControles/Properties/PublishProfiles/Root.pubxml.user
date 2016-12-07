@@ -1,0 +1,1399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo es utilizado por el proceso de paquete/publicación de nuestro proyecto Web. Puede personalizar el comportamiento de este proceso
+editando este archivo MSBuild. Para conocer más acerca de esto, visite http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Jorge\Desktop\WebSite CONTROLES ANGULAR</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>07/01/2016 17:03:59</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>07/01/2016 17:03:59</publishTime>
+    </File>
+    <File Include="bin/ClbDatControles.dll">
+      <publishTime>10/06/2016 17:26:15</publishTime>
+    </File>
+    <File Include="bin/ClbModControles.dll">
+      <publishTime>10/06/2016 17:26:13</publishTime>
+    </File>
+    <File Include="bin/ClbNegControles.dll">
+      <publishTime>10/06/2016 17:26:16</publishTime>
+    </File>
+    <File Include="bin/ClbUtilerias.dll">
+      <publishTime>10/06/2016 17:26:13</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Helpers.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Mvc.resources.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Optimization.resources.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Razor.resources.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.WebPages.resources.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationBlocks.Data.dll">
+      <publishTime>09/06/2016 12:07:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/01/2016 17:04:03</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/01/2016 17:04:03</publishTime>
+    </File>
+    <File Include="bin/Nezter.System.ComboGeneral.dll">
+      <publishTime>09/06/2016 12:10:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>07/01/2016 17:04:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/01/2016 17:04:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/01/2016 17:04:02</publishTime>
+    </File>
+    <File Include="bin/webControles.dll">
+      <publishTime>10/06/2016 17:34:17</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/01/2016 17:04:05</publishTime>
+    </File>
+    <File Include="Content/AdminLTE.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/AdminLTE.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap-select.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap-select.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap-switch.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/ionicons.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-black-light.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-black-light.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-black.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-black.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-blue-light.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-blue-light.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-blue.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-blue.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-green-light.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-green-light.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-green.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-green.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-purple-light.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-purple-light.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-purple.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/skin-purple.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-red-light.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-red-light.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-red.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-red.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-yellow-light.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-yellow-light.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-yellow.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/skin-yellow.min.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="Content/skins/_all-skins.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/skins/_all-skins.min.css">
+      <publishTime>09/06/2016 12:09:17</publishTime>
+    </File>
+    <File Include="Content/toastr/toastr.css">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/06/2016 12:09:16</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff2">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/06/2016 12:09:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/06/2016 12:09:16</publishTime>
+    </File>
+    <File Include="img/avatar.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/avatar04.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/avatar2.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/avatar3.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/avatar5.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/avatar51.png">
+      <publishTime>09/06/2016 12:09:19</publishTime>
+    </File>
+    <File Include="img/boxed-bg.jpg">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/american-express.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/cirrus.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/mastercard.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/mestro.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/paypal.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/paypal2.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/credit/visa.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/Editar.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/eliminar.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/icons.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/loading-bg.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/loading-circle.gif">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="img/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>09/06/2016 12:09:20</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/15/2016 09:10:06</publishTime>
+    </File>
+    <File Include="Scripts/app.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/app.min.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/.gitignore">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/bower.json">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/composer.json">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/CONTRIBUTING.md">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/css/bootstrap-select.css">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/css/bootstrap-select.css.map">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/bootstrap-select.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/bootstrap-select.js.map">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ar_AR.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ar_AR.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-bg_BG.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-bg_BG.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-cro_CRO.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-cro_CRO.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-cs_CZ.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-cs_CZ.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-da_DK.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-da_DK.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-de_DE.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-de_DE.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-en_US.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-en_US.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-es_CL.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-es_CL.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-eu.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-eu.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fa_IR.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fa_IR.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fi_FI.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fi_FI.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fr_FR.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-fr_FR.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-hu_HU.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-hu_HU.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-id_ID.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-id_ID.min.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-it_IT.js">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-it_IT.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ko_KR.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ko_KR.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-lt_LT.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-lt_LT.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-nb_NO.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-nb_NO.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-nl_NL.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-nl_NL.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pl_PL.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pl_PL.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pt_BR.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pt_BR.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pt_PT.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-pt_PT.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ro_RO.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ro_RO.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ru_RU.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ru_RU.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sk_SK.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sk_SK.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sl_SI.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sl_SI.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sv_SE.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-sv_SE.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-tr_TR.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-tr_TR.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ua_UA.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-ua_UA.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-zh_CN.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-zh_CN.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-zh_TW.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/dist/js/i18n/defaults-zh_TW.min.js">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/base.html">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/css/base.css">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/img/logos/membermeister.png">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/img/logos/snapappointments.png">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/img/logos/thermofisher.png">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/js/base.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/nav.html">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/custom_theme/toc.html">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/css/custom.css">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/css/bootstrap-select.css">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/css/bootstrap-select.css.map">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/css/bootstrap-select.min.css">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/bootstrap-select.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/bootstrap-select.js.map">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/bootstrap-select.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ar_AR.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ar_AR.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-bg_BG.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-bg_BG.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-cro_CRO.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-cro_CRO.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-cs_CZ.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-cs_CZ.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-da_DK.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-da_DK.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-de_DE.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-de_DE.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-en_US.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-en_US.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-es_CL.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-es_CL.min.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-eu.js">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-eu.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fa_IR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fa_IR.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fi_FI.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fi_FI.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fr_FR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-fr_FR.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-hu_HU.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-hu_HU.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-id_ID.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-id_ID.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-it_IT.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-it_IT.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ko_KR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ko_KR.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-lt_LT.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-lt_LT.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-nb_NO.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-nb_NO.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-nl_NL.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-nl_NL.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pl_PL.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pl_PL.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pt_BR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pt_BR.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pt_PT.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-pt_PT.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ro_RO.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ro_RO.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ru_RU.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ru_RU.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sk_SK.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sk_SK.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sl_SI.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sl_SI.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sv_SE.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-sv_SE.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-tr_TR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-tr_TR.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ua_UA.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-ua_UA.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-zh_CN.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-zh_CN.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-zh_TW.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/dist/js/i18n/defaults-zh_TW.min.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/examples.md">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/index.md">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/methods.md">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/docs/options.md">
+      <publishTime>09/06/2016 12:09:26</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/docs/mkdocs.yml">
+      <publishTime>09/06/2016 12:09:25</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/Gruntfile.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/.jshintrc">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/bootstrap-select.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-ar_AR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-bg_BG.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-cro_CRO.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-cs_CZ.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-da_DK.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-de_DE.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-en_US.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-es_CL.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-eu.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-fa_IR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-fi_FI.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-fr_FR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-hu_HU.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-id_ID.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-it_IT.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-ko_KR.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-lt_LT.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-nb_NO.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-nl_NL.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-pl_PL.js">
+      <publishTime>09/06/2016 12:09:27</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-pt_BR.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-pt_PT.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-ro_RO.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-ru_RU.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-sk_SK.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-sl_SI.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-sv_SE.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-tr_TR.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-ua_UA.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-zh_CN.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/js/i18n/defaults-zh_TW.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/less/bootstrap-select.less">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/less/variables.less">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/LICENSE">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/package.json">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/README.md">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/sass/bootstrap-select.scss">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/sass/variables.scss">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-select-1.10.0/test.html">
+      <publishTime>09/06/2016 12:09:24</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-switch.min.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/cldr.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/dx.common.css">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/dx.dark.css">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/dx.light.css">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/dx.spa.css">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxicons.eot">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxicons.ttf">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxicons.woff">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxiconsios.eot">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxiconsios.ttf">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Content/icons/dxiconsios.woff">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/cldr/event.js">
+      <publishTime>09/06/2016 12:09:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/cldr/supplemental.js">
+      <publishTime>09/06/2016 12:09:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/cldr/unresolved.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/dx.all.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/dx.all.min.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize.min.js">
+      <publishTime>09/06/2016 12:09:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/currency.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/date.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/message.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/number.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/plural.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/globalize/relative-time.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/js.js">
+      <publishTime>09/06/2016 12:09:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/jszip.min.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Dx/Scripts/underscore-1.5.1.min.js">
+      <publishTime>09/06/2016 12:09:29</publishTime>
+    </File>
+    <File Include="Scripts/Common/messageCommon.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/MenuDinamico.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzActividadProceso.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzBandeja.Grid.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzBandeja.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzBandejaPaginacion.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzComentarios.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzControl.devextreme.js">
+      <publishTime>09/21/2016 10:14:28</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/nzControl.js">
+      <publishTime>09/13/2016 21:31:58</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/uploadFiles2.js">
+      <publishTime>08/31/2016 17:57:44</publishTime>
+    </File>
+    <File Include="Scripts/Common/Nz/Visualizador.js">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Scripts/Common/selectCommon.js">
+      <publishTime>09/06/2016 12:09:28</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/actividadController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/arbolController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/AreaProcesoController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/BandejaColumnaController.js">
+      <publishTime>09/06/2016 13:51:08</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/BandejaFiltrosController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/busquedaController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/ConfigurarActividadController.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/encConfBandejaController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/formulariosController.js">
+      <publishTime>09/07/2016 18:00:01</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/mensajeController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/menuController.js">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/menuIconoController.js">
+      <publishTime>09/06/2016 12:09:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/paginaController.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/ParametrosController.js">
+      <publishTime>09/06/2016 12:12:01</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/RelSeccionesController.js">
+      <publishTime>09/07/2016 17:49:17</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/resumenSolicitudController.js">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/seccionControlController.js">
+      <publishTime>08/31/2016 16:55:52</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/seccionController.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/test.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/Controllers/tipoProcesoController.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/core/nz-config.js">
+      <publishTime>08/31/2016 17:58:03</publishTime>
+    </File>
+    <File Include="Scripts/core/nz-switch.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/demo.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/globinfo/jQuery.glob.es-MX.min.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/html5shiv.min.js">
+      <publishTime>09/06/2016 12:09:22</publishTime>
+    </File>
+    <File Include="Scripts/jQuery-2.1.4.min.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui.min.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/.gitignore">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/bower.json">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/CONTRIBUTING.md">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>09/06/2016 12:09:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/06/2016 12:09:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-validation-unobtrusive/README.md">
+      <publishTime>09/06/2016 12:09:32</publishTime>
+    </File>
+    <File Include="Scripts/jquery.glob.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.globalize/cultures/globalize.culture.es-MX.js">
+      <publishTime>09/06/2016 12:09:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/Models/enumTipoControl.js">
+      <publishTime>09/06/2016 12:09:32</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/npm.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/bootstrap-treeview/bootstrap-treeview.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/nestedSortable/jquery.dataTables.min.css">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/nestedSortable/jquery.dataTables.min.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/nestedSortable/jquery.mjs.nestedSortable.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/.bower.json">
+      <publishTime>09/06/2016 12:09:32</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/bower.json">
+      <publishTime>09/06/2016 12:09:33</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/README.md">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.css">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.js.map">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.less">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.min.css">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.min.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Plugin/toastr/toastr.scss">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>09/06/2016 12:09:23</publishTime>
+    </File>
+    <File Include="Scripts/Services/actividadService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/arbolService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/AreaProcesoService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/bandejaColumnaService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/BandejaFiltrosService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/busquedaService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/ConfigurarActividadService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/encConfBandejaService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/formulariosService.js">
+      <publishTime>08/30/2016 12:28:33</publishTime>
+    </File>
+    <File Include="Scripts/Services/MenuDinamicoService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Services/menuIconoService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Services/menuService.js">
+      <publishTime>09/06/2016 12:09:34</publishTime>
+    </File>
+    <File Include="Scripts/Services/ParametrosService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Services/RelSeccionesService.js">
+      <publishTime>09/07/2016 16:48:24</publishTime>
+    </File>
+    <File Include="Scripts/Services/seccionControlService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Services/seccionService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/Services/tipoProcesoService.js">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Actividad/Create.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/Actividad/Index.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/Actividad/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/AreaProceso/Create.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/AreaProceso/index.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/AreaProceso/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/Bandeja/index.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/BandejaApi/Index.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/BandejaApi/Parametros.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/BandejaColumna/CreateBandejaColumna.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/BandejaColumna/ListaBandejaColumna.cshtml">
+      <publishTime>09/06/2016 13:56:58</publishTime>
+    </File>
+    <File Include="Views/BandejaFiltros/CreateBandejaFiltros.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/BandejaFiltros/ListaBandejaFiltros.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/Busqueda/Index.cshtml">
+      <publishTime>09/06/2016 14:01:40</publishTime>
+    </File>
+    <File Include="Views/Busqueda/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/Comentarios/Index.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/ConfigurarActividad/Configuracion.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/ConfigurarActividad/Index.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/ConfigurarActividad/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/ConfigurarActividad/Proceso.cshtml">
+      <publishTime>09/06/2016 12:09:36</publishTime>
+    </File>
+    <File Include="Views/Controles/EjemploEditar.cshtml">
+      <publishTime>09/09/2016 15:12:15</publishTime>
+    </File>
+    <File Include="Views/Controles/EjemploGuardar.cshtml">
+      <publishTime>09/13/2016 21:30:24</publishTime>
+    </File>
+    <File Include="Views/Controles/EjemploUpload.cshtml">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Controles/EjemploVisor.cshtml">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Controles/Index.cshtml">
+      <publishTime>09/07/2016 17:55:59</publishTime>
+    </File>
+    <File Include="Views/Controles/VistaPrevia.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Formularios/Guardar.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Formularios/Index.cshtml">
+      <publishTime>09/06/2016 14:51:49</publishTime>
+    </File>
+    <File Include="Views/Formularios/Lista.cshtml">
+      <publishTime>10/10/2016 16:23:35</publishTime>
+    </File>
+    <File Include="Views/Home/About.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Home/Contact.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/01/2016 18:09:05</publishTime>
+    </File>
+    <File Include="Views/Menu/Create.cshtml">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Menu/Index.cshtml">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Menu/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/MenuIcono/Index.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/PaginaPrincipal/Index.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Parametros/index.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Parametros/Modal.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/SeccionControl/Index.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Secciones/Guardar.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Controles/UploadFile2.cshtml">
+      <publishTime>08/31/2016 17:58:08</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Shared/Home/_Visualizador.cshtml">
+      <publishTime>09/07/2016 18:03:30</publishTime>
+    </File>
+    <File Include="Views/Shared/Paginacion/Pagina.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>10/06/2016 17:41:16</publishTime>
+    </File>
+    <File Include="Views/TipoProceso/Create.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/TipoProceso/Index.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/TipoProceso/Lista.cshtml">
+      <publishTime>09/06/2016 12:09:37</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/06/2016 12:09:35</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/06/2016 17:34:20</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

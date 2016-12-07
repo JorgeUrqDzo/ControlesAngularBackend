@@ -1,0 +1,60 @@
+﻿
+@using Microsoft.Ajax.Utilities
+@using webControles.Helpers
+@model webControles.Models.TipoProcesoModel
+
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayName("Id de Area Proceso")
+        </th>
+        <th>
+            @Html.DisplayName("Tipo Proceso")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayName("")
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model.listTipoProcesoModel)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAreaProceso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProceso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+
+            <td>
+                <div class="form-group">
+                    <div class="btn-group">
+                        @Html.HiddenFor(modelItem => item.IdTipoProceso, new { @Id = "hiddenIdTipoProceso" })
+                        <button type="button" class="btn btn-warning" id="btnEditar" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+
+

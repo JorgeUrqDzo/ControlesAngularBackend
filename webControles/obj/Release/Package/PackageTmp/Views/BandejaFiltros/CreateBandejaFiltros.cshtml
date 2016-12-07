@@ -1,0 +1,52 @@
+﻿@model webControles.Models.BandejaFiltrosModel
+
+@{
+    ViewBag.Title = "CreateBandejaFiltros";
+}
+
+<div class="modal" id="ModalAltaFiltros" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="tituloBandejaModal">Alta de filtro</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @using (Html.BeginForm("", "", FormMethod.Post, new { id = "formCreate" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <div class="form-group">
+                            <div style="display: none" class="col-md-12">
+                                @Html.LabelFor(model => model.IdDentConfBandejaFiltros)
+                                @Html.EditorFor(model => model.IdDentConfBandejaFiltros)
+                                @Html.ValidationMessageFor(model => model.IdDentConfBandejaFiltros)
+                            </div>
+
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.Filtro)
+                                @Html.TextBoxFor(model => model.Filtro, new { @class = "form-control activado" })
+                                @Html.ValidationMessageFor(model => model.Filtro, null, new { @class = "text-danger" })
+                            </div>
+
+                            <div class="col-md-6">
+                                @Html.LabelFor(model => model.IdTipoControl)
+                                @Html.DropDownListFor(model => model.IdTipoControl, new SelectList(ViewBag.lstTipoControl, "Llave", "Titulo"), new { @class = "form-control activado" })
+                                @Html.ValidationMessageFor(model => model.IdTipoControl, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="col-lg-12">
+                    <button type="button" id="btnBandejaFiltroModalAceptar" class="btn btn-primary">Aceptar</button>
+                    <button type="button" id="btnBandejaFiltroModalCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

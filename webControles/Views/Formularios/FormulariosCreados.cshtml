@@ -1,0 +1,48 @@
+﻿@using webControles.Helpers
+@model webControles.Models.Views.FormularioViewModel
+@{
+    ViewBag.Title = "FormulariosCreados";
+}
+
+<i class="fa fa-book"></i> Formularios Registrados <span class="badge">@Model.objPaginacionModel.TotalElementos</span>
+@Html.Partial("~/Views/Shared/Paginacion/Pagina.cshtml", Model.objPaginacionModel)
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.objFormularioModel.IdFormulario)
+            @*Formulario ID*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objFormularioModel.Nombre)
+            @*Nombre*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objFormularioModel.Descripcion)
+            @*Descripción*@
+        </th>
+    </tr>
+    @foreach (var item in Model.lstFormularioModel)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdFormulario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                <div class="form-group">
+                    <div class="btn-group">
+                        @Html.HiddenFor(modelItem => item.IdFormulario, new { @Id = "hdfIdFormularioRow" })
+                        <button type="button" class="btn btn-default" id="btnEditar" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+    }
+</table>
+@Html.Partial("~/Views/Shared/Paginacion/Pagina.cshtml", Model.objPaginacionModel)

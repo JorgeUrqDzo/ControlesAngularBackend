@@ -1,0 +1,37 @@
+﻿
+@{
+  
+}
+
+    <div id="collapseVisorDocs" class="panel-collapse collapse in" role="tabpanel">
+        <div class="panel-body">
+            <div class="row">
+                @Html.Partial("Home/_Visualizador")
+            </div>
+        </div>
+    </div>
+
+<div id="UploadSolicitud">
+</div>
+
+@Html.Partial("Controles/UploadFile2")
+@section scripts{
+    
+
+<script src="~/Scripts/Common/Nz/uploadFiles2.js"></script>
+<script src="~/Scripts/core/nz-config.js"></script>
+
+
+
+    <script>
+        var documentoResumen = new uploadFile2();
+
+        documentoResumen.init({ panelElement: 'UploadSolicitud', panelMode: 'large', domainApi : nzConfig.getDomainApi()},
+                        {
+                            TablaRelacion: 4,
+                            IdRelacion: 1,
+                            IdUsuarioCreacion: 1
+                        });
+
+    </script>
+}

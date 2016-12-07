@@ -1,0 +1,58 @@
+﻿@using Microsoft.Ajax.Utilities
+@using webControles.Helpers
+@model webControles.Models.MenuModel
+
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+<table class="table table-striped">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Activo)
+        </th>
+        <th>
+            @Html.DisplayName("")
+        </th>
+    </tr>
+
+    @foreach (var item in Model.listMenuModel)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Activo)
+            </td>
+            <td>
+                <div class="form-group">
+                    <div class="btn-group">
+                        @Html.HiddenFor(modelItem => item.IdMenu, new { @Id = "hiddenIdMenu" })
+                        <button type="button" class="btn btn-warning" id="btnEditar" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+

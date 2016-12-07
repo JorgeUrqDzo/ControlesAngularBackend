@@ -1,0 +1,142 @@
+﻿@using webControles.Helpers;
+@model webControles.Models.ActividadModel
+@{
+    ViewBag.Title = "ACTIVIDADES";
+}
+
+
+<div id="content">
+    <div class="panel panel-default">
+        <div class="panel-body"  >
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div id="divBuscar" class="row">
+                        <div class="col-xs-12 col-md-12">
+                                <div class="input-group">
+                                    @Html.TextBox("TextoBuscar", null, new { @placeholder = "Buscar", @class = "form-control", @id = "txtTextoBuscar" })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" id="btnBuscar" title="Buscar"><span class="glyphicon glyphicon-search"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <br />
+                    <div id="divLista" >
+                        @Html.Partial("~/Views/Actividad/Lista.cshtml", Model)
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div id="divActividad" >
+                        @Html.Partial("Create", Model.objActividadModel)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{  
+    <script src="~/Scripts/Controllers/actividadController.js"></script>
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+    <script src="~/Scripts/Services/actividadService.js"></script>
+    <script src="~/Scripts/Controllers/mensajeController.js"></script> 
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Common/messageCommon.js"></script>  
+    
+    <script>
+
+        (function () {
+          
+            var objActividadController = new ActividadController();
+            var varPaginaController = new PaginaController();
+            objActividadController.HabilitarControles(false);
+
+            $(document).on('click', '#btnBuscar', function(event) {
+                //cancela el evento del click
+                event.preventDefault();
+                //obtiene la url para cargar el listado, en esta url se le suma el Filtro de la Busqueda
+                var url = '@Url.Action("Lista", "Actividad")' + '?TextoBuscar=' + $('#txtTextoBuscar').val();
+                objActividadController.Buscar(url);
+            });
+
+            $(document).on('click', '#btnEditar', function () {
+               
+                var varId =
+                   $(this).parent().find('input[id=hiddenIdActividad]').val();
+                    var url = '@Url.Action("Create", "Actividad")';
+                objActividadController.Editar(url, varId);
+            });
+
+        
+          
+            $(document).on('click', '#btnGuardar', function (event) {
+                var url = '@Url.Action("Agregar", "Actividad")';
+
+                var datos = {
+                    IdEncActividad: $("#hiddenIdActividad1").val(),
+                    IdTipoProceso: $('#selTipoProceso').val(),
+                    Orden: $("#txtOrden").val(),
+                    Activo: $("#txtActivo").val(),
+                    Actividad: $("#txtActividad").val(),
+                    UrlActividad: $("#txtUrlActividad").val(),
+                    UrlDestinoAlTerminar: $("#txtUrlDestino").val(),
+                   TiempoPromedioObjetivo: $("#txtTiempoPromedio").val(),
+                };
+                var urlBuscar = '@Url.Action("Lista", "Actividad")' + '?TextoBuscar=' + $('#txtTextoBuscar').val();
+                objActividadController.Guardar(url, datos, urlBuscar);
+
+                });
+
+
+
+            $(document).on('click', '#btnCancelar', function (event) {
+                objActividadController.Cancelar();
+            });
+            $(document).on('click', '#btnNuevo', function(event) {
+
+                objActividadController.NuevaActividad();
+            });
+
+            $(document).on('click', '#btnActivar', function (event) {
+                ///Se obtiene el id del programa seleccionado
+                objActividadController.Activar($("#txtActivo").prop("checked"));
+                var url = '@Url.Action("ActualizarEstado", "Actividad")';
+                var datos = {
+                    IdEncActividad: $("#hiddenIdActividad1").val(),
+                    IdTipoProceso: $('#selTipoProceso').prop('selectedIndex'),
+                    Orden: $("#txtOrden").val(),
+                    Activo: $("#txtActivo").prop('checked'),
+                    Actividad: $("#txtActividad").val(),
+                    UrlActividad: $("#txtActividad").val(),
+                    UrlDestinoAlTerminar: $("#txtUrlDestino").val(),
+                    TiempoPromedioObjetivo: $("#txtTiempoPromedio").val(),
+                };
+                var urlBuscar = '@Url.Action("Lista", "Actividad")' + '?TextoBuscar=' + $('#txtTextoBuscar').val();
+                objActividadController.ActualizarEstado(url,datos, urlBuscar);
+            });
+
+
+            $(document).on('click', '#btnDesactivar', function (event) {
+                objActividadController.Activar($("#txtActivo").prop("checked"));
+                var url = '@Url.Action("ActualizarEstado", "Actividad")';
+                var datos = {
+                    IdEncActividad: $("#hiddenIdActividad1").val(),
+                    IdTipoProceso: $('#selTipoProceso').prop('selectedIndex'),
+                    Orden: $("#txtOrden").val(),
+                    Activo: $("#txtActivo").prop('checked'),
+                    Actividad: $("#txtActividad").val(),
+                    UrlActividad: $("#txtActividad").val(),
+                    UrlDestinoAlTerminar: $("#txtUrlDestino").val(),
+                    TiempoPromedioObjetivo: $("#txtTiempoPromedio").val(),
+                };
+                var urlBuscar = '@Url.Action("Lista", "Actividad")' + '?TextoBuscar=' + $('#txtTextoBuscar').val();
+                objActividadController.ActualizarEstado(url, datos, urlBuscar);
+            });
+
+            //Inicializa la función cambio de pagina
+            objActividadController.CambioPagina();
+        })();
+
+    </script>
+}

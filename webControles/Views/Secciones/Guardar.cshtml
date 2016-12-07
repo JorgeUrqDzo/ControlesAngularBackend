@@ -1,0 +1,117 @@
+﻿@using System.Security.Policy
+@using Newtonsoft.Json
+@model webControles.Models.Views.SeccionControlViewModel
+
+
+@using (Html.BeginForm("GuardarSeccion", "Secciones", FormMethod.Post, new { enctype = "multipart/form-data", id = "formGuardarSeccion" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.ObjSeccionesModel.IdSeccion, new { @Id = "hdfIdSeccion" })
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Alta de Sección</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ObjSeccionesModel.Nombre, new {@class = "control-label"})
+                        @Html.TextBoxFor(model => model.ObjSeccionesModel.Nombre, new {@class = "form-control", @placeholder = "Nombre de Seccion", @id = "txtNombreSeccion"})
+                        @Html.ValidationMessageFor(model => model.ObjSeccionesModel.Nombre, null, new {@class="text-danger"})
+                    </div>
+                </div>
+                @*<div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ObjSeccionesModel.IdTipoSeccion, new { @class = "control-label" })
+                            @Html.DropDownListFor(model => model.ObjSeccionesModel.IdTipoSeccion, new SelectList(ViewBag.lstTipoSeccion, "Llave", "Titulo"), new { @class = "form-control", @id = "selTipoSeccion" })
+                            @Html.ValidationMessageFor(model => model.ObjSeccionesModel.IdTipoSeccion)
+                        </div>
+                    </div>*@
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ObjSeccionesModel.Columnas, new {@class = "control-label"})
+                        @Html.TextBoxFor(model => model.ObjSeccionesModel.Columnas, new {@class = "form-control", @placeholder = "Columnas", @id = "txtColumnasSeccion"})
+                        @Html.ValidationMessageFor(model => model.ObjSeccionesModel.Columnas, null, new {@class="text-danger"})
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ObjSeccionesModel.IdTipoSeccion, new {@class = "control-label"})
+                        @Html.DropDownListFor(model => model.ObjSeccionesModel.IdTipoSeccion, new SelectList(ViewBag.lstTipoSeccion, "Llave", "Titulo"), new {@class = "form-control", @id = "selTipoSeccion"})
+                        @Html.ValidationMessageFor(model => model.ObjSeccionesModel.IdTipoSeccion, null, new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ObjSeccionesModel.Grupo, new { @class = "control-label", @id = "lbltxtIdGrupo", disabled = "disabled" })
+
+                        <div class="input-group">
+
+                            @if (Model.ObjSeccionesModel != null && Model.ObjSeccionesModel.IdTipoSeccion == 2)
+                            {
+                                @Html.DropDownListFor(model => Model.ObjSeccionesModel.IdGrupo, new SelectList(ViewBag.lstIdGrupo, "Llave", "Titulo"), new { @class = "form-control", @placeholder = "Id de Grupo", @id = "txtIdGrupo" })
+                            }
+                            else
+                            {
+                                @Html.DropDownListFor(model => Model.ObjSeccionesModel.IdGrupo, new SelectList(ViewBag.lstIdGrupo, "Llave", "Titulo"), new { @class = "form-control", @placeholder = "Id de Grupo", @id = "txtIdGrupo", disabled = "disabled" })
+                            }
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" id="btnAgregarGrupo" title="Agregar grupo"> <span class="glyphicon glyphicon-plus"></span> </button>
+                            </span>
+                            @Html.ValidationMessageFor(model => Model.ObjSeccionesModel.Grupo, null, new {@class="text-danger"})
+                        </div>
+
+                    </div>
+                </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ObjSeccionesModel.IdSeccionIcono, new {@class = "control-label"})
+                            @*@Html.DropDownListFor(model => Model.ObjSeccionesModel.IdSeccionIcono, new SelectList(ViewBag.Iconos, "Llave", "Titulo"), new { @class = "form-control", @id = "txtIcono" })*@
+                            @if (Model.ObjSeccionesModel != null && Model.ObjSeccionesModel.IdTipoSeccion == 2)
+                            {
+                                @Html.DropDownListFor(model => Model.ObjSeccionesModel.IdSeccionIcono, new SelectList(ViewBag.Iconos, "Llave", "Titulo"), new { @class = "form-control", @id = "txtIcono" })
+                            }
+                            else
+                            {
+                                @Html.DropDownListFor(model => Model.ObjSeccionesModel.IdSeccionIcono, new SelectList(ViewBag.Iconos, "Llave", "Titulo"), new { @class = "form-control", @id = "txtIcono", disabled = "disabled" })
+                            }
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.HiddenFor(model => model.ObjSeccionesModel.Tabla, new {@id = "hidenTablaName"})
+                        <label class="control-label tipoFormulario1">Tablas Base de Datos:</label>
+                        <select id="dbTablesNames" class="form-control tipoFormulario1">
+                            <option value="Sin Asignar">(Ninguna)</option>
+                        </select>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="pull-left col-md-4">
+                    @Html.LabelFor(model => model.ObjSeccionesModel.primaryKeyName, null, new { @class = "tipoFormulario1" })
+                    @Html.TextBoxFor(model => model.ObjSeccionesModel.primaryKeyName, new { @id = "txtPrimaryKeyName", @class = "form-control tipoFormulario1" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+}
+<div class="panel panel-default">
+    <div class="panel-heading">Alta de Controles</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                @Html.Partial("~/Views/SeccionControl/Index.cshtml", Model)
+            </div>
+        </div>
+    </div>
+</div>
+<input id="btnGuardarSeccion" type="button" value="Guardar" class="btn btn-primary" />

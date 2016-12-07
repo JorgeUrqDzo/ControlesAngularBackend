@@ -1,0 +1,204 @@
+﻿#sortable1, #sortable2 {
+    border: 1px solid #d3d3d3;
+    width: 100%;
+    min-height: 200px;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+    
+  }
+  #sortable1 li, #sortable2 li {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1em;
+    color:white;
+    width: 90%;
+  }
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #d3d3d3;
+    background: #3c8dbc;
+    font-weight: normal;
+    color: #555555;
+    cursor: pointer; cursor: hand; 
+}
+.ui-sortable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.user agent stylesheetli {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+
+
+
+.loading {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url('../img/loading-bg.png');
+	z-index: 9999999;
+}
+.loading img {
+	width: 42px;
+	height: 42px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -41px;
+	margin-left: -21px;
+}
+.loading marquee {
+	color:#fff;
+	text-align: center;
+	width: 400px;
+	height: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: 20px;
+	margin-left: -100px;
+}
+
+/* inicio css rafael Bandeja columna */
+
+/*inicio shadow box*/
+#shadow-box-BandejaColumna {
+    border:1px solid black;
+    display:none;
+}
+#shadow-box-BandejaColumna{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.71);    
+    width: 100%;
+    height: 100%;
+        z-index: 3;
+}
+#content-BandejaColumna {
+    padding:20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #efeeef; 
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+/*fin shadow box*/
+
+/*inicio tabla*/
+#tableBandejaColumna .superHeader th {
+    padding-bottom:10px;
+    padding-top:10px;
+}
+#tableBandejaColumna .headerTable th {
+    color:white;
+}
+#tableBandejaColumna, #tableBandejaColumna .headerTable th, #tableBandejaColumna .bodyTable td  {
+    padding:10px;
+     border-bottom: 1px solid #ddd;
+}
+#tableBandejaColumna .bodyTable tr:nth-child(even){
+    background-color:#dfdfdf
+}
+#tableBandejaColumna .headerTable th{
+background-color: #337ab7;
+}
+.imageTableBandejaColumna {
+    width:25px;
+    height:25px;
+}
+.PanelBandejaColumna {
+        width:auto;
+        background-color:white;
+        border-radius:4px;
+        overflow:auto;
+ }
+/*fin tabla*/
+
+
+
+/* final css rafael Bandeja columna */
+
+/*Diseño de pagina de Bandejas-Cindy */
+
+
+#TableBandejas  {
+ 
+    background-color: white;
+    color: black;
+}
+
+#TableBandejas .Headers th {
+    position: relative;
+    background-color: #337ab7;
+    color: white;
+    padding:10px;
+}
+
+#bandejas {
+    float: left;
+    top: 55px;
+    width: 45%; 
+}
+
+
+#columnas {
+    float: right;
+    width: 50%;
+}
+#divider {
+    position: absolute;
+    left:47%;
+    top:0%;
+    bottom:0%;
+    border-left:3px solid gray;
+  
+}
+
+.content {
+      display:block;
+      overflow:auto;
+}
+
+   
+
+/*Final Diseño Cindy*/
+
+
+/*----------------------dxdatagrid inicio-------------------*/
+#gridContainer {
+    height: auto;
+    width: 100%;
+    background-color:white;
+}
+.dxDataGridImage {
+    width:50px;
+    height:50px;
+}
+
+.dx-datagrid-headers .blue {
+     background-color: #337ab7; 
+     color:white;
+}
+
+.dx-datagrid-rowsview .blue {
+        color:black;
+        border-bottom:1px solid #d3d3d3;
+}
+/*----------------------dxdatagrid fin-------------------*/

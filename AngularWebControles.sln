@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webControles", "webControles\webControles.csproj", "{29E59C22-865B-4D49-A00F-FE663E63487B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClbModControles", "ClbModControles\ClbModControles.csproj", "{307309B5-2165-4ECB-86C3-677794421583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClbDatControles", "ClbDatControles\ClbDatControles.csproj", "{E5AB3BF9-33B4-4184-A982-D9E3337DB851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClbNegControles", "ClbNegControles\ClbNegControles.csproj", "{C32A90BF-9341-4EED-A1C2-1F50CBCF10F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClbUtilerias", "ClbUtilerias\ClbUtilerias.csproj", "{3B772C71-8F89-4C3D-AEC9-BDB0761D8EC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiControles", "WebApiControles\WebApiControles.csproj", "{07C4B8EA-438A-4A6E-B758-6D9C1C85F08D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webEjemploControles", "webEjemploControles\webEjemploControles.csproj", "{A638BA5E-B959-414A-889B-D70BFB4B4AE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = Controles Dinamicos utilizando Angular y DevExtreme
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29E59C22-865B-4D49-A00F-FE663E63487B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E59C22-865B-4D49-A00F-FE663E63487B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E59C22-865B-4D49-A00F-FE663E63487B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E59C22-865B-4D49-A00F-FE663E63487B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307309B5-2165-4ECB-86C3-677794421583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307309B5-2165-4ECB-86C3-677794421583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307309B5-2165-4ECB-86C3-677794421583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307309B5-2165-4ECB-86C3-677794421583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AB3BF9-33B4-4184-A982-D9E3337DB851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AB3BF9-33B4-4184-A982-D9E3337DB851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AB3BF9-33B4-4184-A982-D9E3337DB851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AB3BF9-33B4-4184-A982-D9E3337DB851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C32A90BF-9341-4EED-A1C2-1F50CBCF10F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C32A90BF-9341-4EED-A1C2-1F50CBCF10F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C32A90BF-9341-4EED-A1C2-1F50CBCF10F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C32A90BF-9341-4EED-A1C2-1F50CBCF10F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B772C71-8F89-4C3D-AEC9-BDB0761D8EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B772C71-8F89-4C3D-AEC9-BDB0761D8EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B772C71-8F89-4C3D-AEC9-BDB0761D8EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B772C71-8F89-4C3D-AEC9-BDB0761D8EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C4B8EA-438A-4A6E-B758-6D9C1C85F08D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C4B8EA-438A-4A6E-B758-6D9C1C85F08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C4B8EA-438A-4A6E-B758-6D9C1C85F08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C4B8EA-438A-4A6E-B758-6D9C1C85F08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A638BA5E-B959-414A-889B-D70BFB4B4AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A638BA5E-B959-414A-889B-D70BFB4B4AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A638BA5E-B959-414A-889B-D70BFB4B4AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A638BA5E-B959-414A-889B-D70BFB4B4AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

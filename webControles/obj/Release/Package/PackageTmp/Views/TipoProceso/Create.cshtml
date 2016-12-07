@@ -1,0 +1,67 @@
+﻿@model webControles.Models.TipoProcesoModel
+
+@using (Html.BeginForm("Agregar", "TipoProceso", FormMethod.Post, new { id = "formTipoProceso" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div role="form" style="margin-bottom: 10px;">
+        <button type="button" class="btn btn-primary" id="btnNuevo"><i class="glyphicon glyphicon-plus"></i>Nuevo</button>
+        <button type="button" class="btn btn-success hide" id="btnGuardar"><i class="glyphicon glyphicon-floppy-disk"></i>Guardar</button>
+        <button type="button" class="btn btn-danger hide" id="btnCancelar"><i class="glyphicon glyphicon-chevron-left"></i>Cancelar</button>
+
+
+        @if (Model.IdTipoProceso > 0)
+        {
+
+            if (!Model.Activo)
+            {
+                <button type="button" class="btn btn-info" id="btnActivar"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+                <button type="button" class="btn btn-info" id="btnDesactivar" style="display:none"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+            }
+            else
+            {
+                <button type="button" class="btn btn-info" id="btnActivar" style="display:none"><i class="glyphicon glyphicon-ok"></i>  Activar</button>
+                <button type="button" class="btn btn-info" id="btnDesactivar"><i class="glyphicon glyphicon-remove"></i>  Desactivar</button>
+            }
+        }
+    </div>
+<div id="divMensaje">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.IdTipoProceso, new { @Id = "hiddenIdTipoProceso1" })
+
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.Label("Area Proceso", new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.objTipoProceso.IdAreaProceso,
+            new SelectList(ViewBag.lstAreaProceso, "Llave", "Titulo"), "Seleccione",
+            new { @class = "form-control", @id = "txtIdAreaProceso" })
+                @Html.ValidationMessageFor(model => model.objTipoProceso.IdAreaProceso)
+
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-lg-6 col-sm-6 col-md-6">
+            <div class="form-group">
+                @Html.Label("Tipo Proceso", new { @class = "control-label " })
+                @Html.TextBoxFor(model => model.TipoProceso, new { @class = "form-control", @Id = "txtTipoProceso" })
+                @Html.ValidationMessageFor(model => model.TipoProceso)
+            </div>
+        </div>
+
+        <div class="form-group" id="divActivo" style="display:none">
+            @Html.LabelFor(model => model.Activo)
+            @Html.CheckBoxFor(model => model.Activo, new { @id = "txtActivo", @class = "form-control" })
+        </div>
+
+    </div>
+</div>
+}
+
+
+
+
+

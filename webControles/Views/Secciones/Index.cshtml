@@ -1,0 +1,60 @@
+﻿@using webControles.Helpers
+@model webControles.Models.Views.SeccionViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div id="divBusqueda" class="row">
+            <div class="col-xs-12 col-md-6">
+                @*<div class="input-group">
+                        @Html.TextBox("TextoBusqueda", null, new { @placeholder = "Buscar", @class = "form-control", @id = "txtTextoBusqueda" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btnBuscar" title="Buscar"> <span class="glyphicon glyphicon-search"></span> </button>
+                        </div>
+                    </div>*@
+            </div>
+            <div class="col-lg-12" id="divSeccion">
+                @Html.Partial("Guardar", Model.objSeccionModel)
+            </div>
+            
+        </div>
+    </div>
+    <div id="divListado">
+        @Html.Partial("~/Views/Secciones/Lista.cshtml", Model)
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/Controllers/seccionController.js?v=1"></script>
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+    <script src="~/Scripts/Services/seccionService.js"></script>
+    <script src="~/Scripts/Controllers/mensajeController.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        var objSeccionController = new SeccionController();
+        var varPaginaController = new PaginaController();
+
+
+        //Guarda seccion en base de datos
+        $(document).on('click', '#btnGuardar', function (event) {
+            //Se manda action y la forma serializada
+            objSeccionController.GuardarSeccion('@Url.Action("Guardar", "Secciones")');
+        });
+        //Editar Sección, tiene que contar con ID
+        $(document).on('click', '#btnEditar', function (event) {
+            var varId = $(this).parent().find('input[id=hdfIdSeccionRow]').val();
+            var url = '@Url.Action("Guardar", "Secciones")';
+            objSeccionController.Editar(url, varId);
+        })
+
+
+    </script>
+
+    }

@@ -1,0 +1,48 @@
+﻿@model webControles.Models.PaginacionModel
+
+@if (Model.TotalPaginas == 0)
+{
+    <div>No se encontraron resultados</div>
+}
+else
+{
+    <div>
+        @if (Model.MostrarPaginacion)
+        {
+            <ul class="pagination" id="pagination">
+                <li>
+                    <a role="menuitem" tabindex="-1" id="aPagina" href="@Url.Action(Model.Action, Model.Controller, new { Pagina = 1})">
+                        <
+                    </a>
+                </li>
+                @for (int i = 0; i < Model.LstPaginas.Count; i++)
+                {
+                    if (Model.PaginaActual == @Model.LstPaginas[i])
+                    {
+                        <li class="active">
+                            <a role="menuitem" tabindex="-1" id="aPagina" href="@Url.Action(Model.Action, Model.Controller, new { Pagina = @Model.LstPaginas[i] })">
+                                  @Model.LstPaginas[i]
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a role="menuitem" tabindex="-1" id="aPagina" href="@Url.Action(Model.Action, Model.Controller, new { Pagina = @Model.LstPaginas[i]})">
+                                  @Model.LstPaginas[i]
+                            </a>
+                        </li>
+                    }
+                
+                    }
+                <li>
+                    <a role="menuitem" tabindex="-1" id="aPagina" href="@Url.Action(Model.Action, Model.Controller, new { Pagina = @Model.TotalPaginas})">
+                        >
+                    </a>
+                </li>
+            </ul>
+        }
+        
+    </div>
+}
+

@@ -1,0 +1,84 @@
+﻿@model webControles.Models.Views.BusquedaBandejaViewModel
+
+@{ var cont = 0;}
+@{ var x = Model.lstBandejaColumnaModel.Count();}
+
+<table id="TableBandejas" class="table">
+    <tr>
+        <th style="text-align:right">
+            <button id="btnAgregar" class="btn btn-primary form-control" data-toggle="modal" data-target="#ModalAltaColumna">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </th>
+        <th>
+            <input type="hidden" id="hdfNumRegistros" value="@x" />
+        </th>
+        <th>
+        </th>
+        <th>
+            <button class="btn btn-danger form-control" id="bandejaColumnaBtnRegresar">Atras</button>
+        </th>
+        <th>
+            <button class="btn btn-success form-control" id="bandejaColumnaBtnSiguiente">Siguiente</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objBandejaColumnaModel.TituloColumna)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objBandejaColumnaModel.ColumnaBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objBandejaColumnaModel.TipoColumna)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objBandejaColumnaModel.PaginaLink)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.lstBandejaColumnaModel)
+    {
+        <tr data-id="@(++cont)" id="@Html.DisplayFor(model => item.IdDetConfBandejaColumna)">
+            @*<input type="hidden" id="idOrden" value="@(cont++)"/>*@
+            <td class="col-lg-1">
+                <button id="subirOrden" type="button" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-arrow-up icon-click up-icon" title="Arriba"></span></button>
+                <button id="bajarOrden" type="button" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-arrow-down icon-click down-icon" title="Abajo"></span></button>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TituloColumna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnaBD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoColumna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaginaLink)
+            </td>
+            <td>
+                @*@Html.Raw(Html.ActionLink("[replacetext]", null, null, new { /**/ }, new { @class = "editarBtnBandejaColumna", data_id = item.IdDetConfBandejaColumna }).ToHtmlString().Replace("[replacetext]", "<img src=\"" + Url.Content("~/img/Editar.png") + "\" class=\"imageTableBandejaColumna\"/ title=\"Editar\">"))
+                    @Html.Raw(Html.ActionLink("[replacetext]", null, null, new { /**/ }, new { @class = "eliminarBtnBandejaColumna", data_id = item.IdDetConfBandejaColumna }).ToHtmlString().Replace("[replacetext]", "<img src=\"" + Url.Content("~/img/eliminar.png") + "\" class=\"imageTableBandejaColumna\"/ title=\"Eliminar\">"))*@
+
+                @Html.HiddenFor(modelItem => item.IdDetConfBandejaColumna, new { @id = "listaBandejaColumnaIdDetConfBandejaColumna" })
+                @Html.HiddenFor(modelItem => item.IdEncConfBandeja, new { @id = "listaBandejaColumnaIdEncConfBandeja" })
+
+                <button class="btn btn-warning" id="editarBtnBandejaColumna" data-toggle="modal" data-target="#ModalAltaColumna">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button class="btn btn-danger" id="eliminarBtnBandejaColumna">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+
+            </td>
+        </tr>
+    }
+</table>
+
+
+@Html.Partial("~/Views/BandejaColumna/CreateBandejaColumna.cshtml", Model.objBandejaColumnaModel)

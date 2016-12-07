@@ -1,0 +1,95 @@
+﻿@using System.Security.Policy
+@using webControles.Helpers
+@model webControles.Models.Views.FormularioViewModel
+
+
+
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.objFormularioModel.Nombre)*@
+            Formulario
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => Model.objFormularioModel.Descripcion)*@
+            Descripcion
+        </th>
+        <th>
+            Activo
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model.lstFormularioModel)
+    {
+
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+                @*@item => item.Nombre*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+                @*@item => item.nombre*@
+            </td>
+
+            @if (@item.Activo)
+            {
+                <td>
+                    @*@Html.LabelFor(modelItem => item.Activo, "Activo")*@
+                    <div class="form-group">
+                        @*@Html.HiddenFor(modelItem => item.IdFormulario, new { @Id = "hdfIdFormularioRow" })*@
+                        <label class="radio-inline">
+                            <input type="checkbox" class="btnAsistencia1" @*id="prendido"*@ name="inlineRadioOptions1" value="option1" checked="checked">
+                            @*<span id="Asistencia1" title="Formulario Activo" class="label label-success">
+                                    Formulario Activo
+                                </span>*@
+                        </label>
+                    </div>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <div class="form-group">
+                        @*@Html.HiddenFor(modelItem => item.IdFormulario, new { @Id = "hdfIdFormularioRow" })*@
+                        <label class="radio-inline">
+                            <input type="checkbox" class="btnAsistencia1" @*id="prendido"*@ name="inlineRadioOptions1" value="option1">
+                            @*<span id="Asistencia1" title="Formulario Inactivo" class="label label-danger">
+                                    Formulario Inactivo
+                                </span>*@
+                        </label>
+                    </div>
+                </td>
+            }
+
+            <td>
+                <div class="form-group">
+                    <div class="btn-group">
+
+                        @Html.HiddenFor(modelItem => item.IdFormulario, new { @Id = "hdfIdFormularioRow" })
+                        @Html.HiddenFor(modelItem => item.IdTipoFormulario, new { @Id = "hdfIdTipoFormularioRow" })
+
+                        <button type="button" class="btn btn-default" id="btnSeleccionarFormulario" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                        <button type="button" class="btn btn-default" id="btnObtenerUUID" title="UUID"> <span class="glyphicon glyphicon-search"></span> </button>
+                        <button type="button" class="btn btn-default" id="btnEliminarFormulario" title="Eliminar"> <span class="glyphicon glyphicon-remove"></span> </button>
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<center>
+    @Html.Partial("Paginacion/Pagina", Model.objPaginacionModel)
+</center>
+
+
+
+

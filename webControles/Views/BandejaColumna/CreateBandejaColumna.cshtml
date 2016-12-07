@@ -1,0 +1,93 @@
+﻿@model webControles.Models.BandejaColumnaModel
+
+@{
+    ViewBag.Title = "CreateBandejaColumna";
+
+}
+
+<div class="PanelBandejaColumna">
+    <div class="modal" id="ModalAltaColumna" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="tituloBandejaModal">Alta de filtro</h4>
+                    <input type="hidden" id="createBandejaColumnaValidarEditar" value="0" />
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        @using (Html.BeginForm("", "", FormMethod.Post, new { id = "formCreate" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <div class="col-lg-12 form-group">
+                                <div style="display: none" class="col-md-12">
+                                    @Html.HiddenFor(model => model.IdEncConfBandeja, new { @id = "hdfIdEncConfBandejaCol" })
+                                    @Html.LabelFor(model => model.IdDetConfBandejaColumna)
+                                    @Html.TextBoxFor(model => model.IdDetConfBandejaColumna, new { @id = "hdfIdDetConfBandejaColumna", @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.IdDetConfBandejaColumna)
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    @Html.LabelFor(model => model.TituloColumna)
+                                    @Html.TextBoxFor(model => model.TituloColumna, new { @id = "createBandejaTituloColumna", @class = "form-control activado" })
+                                    @Html.ValidationMessageFor(model => model.TituloColumna, null, new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    @Html.LabelFor(model => model.ColumnaBD)
+                                    @*@Html.TextBoxFor(model => model.ColumnaBD, new { @class = "form-control activado" })
+                                        @Html.ValidationMessageFor(model => model.ColumnaBD, null, new { @class = "text-danger" })*@
+                                    <div id="divTipoConsulta"></div>
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    @Html.LabelFor(model => model.TipoColumna)
+                                    @Html.DropDownListFor(model => model.IdTipoColumna, new SelectList(ViewBag.lstTipoColumna, "Llave", "Titulo"), new { @id = "createBandejaColumnaIdTipoColumna", @class = "form-control activado" })
+                                    @Html.ValidationMessageFor(model => model.TipoColumna, null, new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12 form-group ">
+                                    @Html.LabelFor(model => model.Clase)
+                                    @Html.TextBoxFor(model => model.Clase, new { @id = "createBandejaColumnaClase", @class = "form-control activado" })
+                                    @Html.ValidationMessageFor(model => model.Clase, null, new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    @Html.LabelFor(model => model.Formato)
+                                    @Html.TextBoxFor(model => model.Formato, new { @id = "createBandejaColumnaFormato", @class = "form-control activado" })
+                                    @Html.ValidationMessageFor(model => model.Formato, null, new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    @Html.LabelFor(model => model.TipoLink)
+                                    @Html.CheckBoxFor(model => model.TipoLink, new { @id = "createBandejaTipoLink"})
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    @Html.LabelFor(model => model.PaginaLink)
+                                    @Html.TextBoxFor(model => model.PaginaLink, new { @id = "createBandejaColumnaPaginaLink", @class = "form-control activado", @placeholder="Utilice el formato '/Link' para que el link se ejecute dese raiz, sin '/' se suma a la url"})
+                                    @Html.ValidationMessageFor(model => model.PaginaLink, null, new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-lg-12">
+                        <div class="col-sm-6 pull-right">
+                            <button type="button" id="btnBandejaColumnaModalAceptar" class="btn btn-success btn-block">Aceptar</button>
+                        </div>
+                        <div class="col-sm-6 pull-right">
+                            <button type="button" id="btnBandejaColumnaModalCancelar" class="btn btn-danger btn-block" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>

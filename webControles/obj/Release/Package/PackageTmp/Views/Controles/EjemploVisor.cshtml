@@ -1,0 +1,44 @@
+﻿@{
+
+}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade  active in" id="tabResumen" aria-labelledby="liResumen">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" data-toggle="collapse">
+                        <h3 id="titleDocumentos" class="panel-title">Documentos</h3>
+                    </div>
+                    <div id="collapseVisorDocs" class="panel-collapse collapse in" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="row">
+                                @Html.Partial("Home/_Visualizador")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+<script src="~/Scripts/core/nz-config.js"></script>
+<script src="~/Scripts/Common/Nz/Visualizador.js"></script>
+<script src="~/Scripts/Controllers/resumenSolicitudController.js"></script>
+    <script>
+        var objResumenSolicitudController = new ResumenSolicitudController();
+
+        var urlActionResumen = {
+
+            }
+
+            var config = {
+            panelElement: "contentVisual",
+            panelMode: "normal",
+            IdTablaRelacion: 4,
+            IdRelacion: 1
+            }
+
+            var Vis = Visualizador.Inicializar(config);
+</script>
+}

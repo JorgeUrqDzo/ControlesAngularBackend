@@ -1,0 +1,49 @@
+﻿@using System.Security.Policy
+@using Newtonsoft.Json
+@model webControles.Models.FormularioModel
+
+@using (Html.BeginForm("Guardar", "Formularios", FormMethod.Post, new { enctype = "multipart/form-data", id = "formGuardarFormulario" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.IdFormulario, new { @Id = "hdfIdFormulario" })
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="form-group" id="DivGroupNombreFormulario">
+                @Html.LabelFor(model => model.Nombre)
+                @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", @placeholder = "Nombre Formulario", @id = "txtNombreFormulario" })
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group" id="DivGroupDescripcionFormulario">
+                @Html.LabelFor(model => model.Descripcion)
+                @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control", @placeholder = "Descripcion Fomulario", @id = "txtDescripcionFormulario" })
+                @Html.ValidationMessageFor(model => model.Descripcion)
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group" id="DivGroupTipoFormulario">
+                @Html.LabelFor(model => model.IdTipoFormulario)
+                @Html.DropDownListFor(model => model.IdTipoFormulario,
+                    new SelectList(ViewBag.tipoFormulario, "Llave", "Titulo"), null,
+                    new {@class = "form-control", @id = "txtIdTipoFormulario"})
+                @Html.ValidationMessageFor(model => model.IdTipoFormulario)
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group" id="DivGroupFormatoFecha">
+                @Html.LabelFor(model => model.FormatoFecha)
+                <select class="form-control" id="txtIdFormatoFecha">
+                    <option value="dd/MM/yyyy">dd/MM/yyyy</option>
+                    <option value="MM/dd/yyyy">MM/dd/yyyy</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+}

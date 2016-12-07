@@ -1,0 +1,7 @@
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\bin\Release\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\bin\Release\ClbUtilerias.pdb
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\obj\Release\ClbUtilerias.csprojResolveAssemblyReference.cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\obj\Release\ClbUtilerias.Resources.Strings.Generales.Generales.resources
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\obj\Release\ClbUtilerias.csproj.GenerateResource.Cache
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\obj\Release\ClbUtilerias.dll
+C:\Users\Jorge\Documents\Visual Studio 2013\Projects\ControlesAngular\src\ControlesAngular\ClbUtilerias\obj\Release\ClbUtilerias.pdb

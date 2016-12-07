@@ -1,0 +1,47 @@
+﻿@using webControles.Helpers
+@model webControles.Models.Views.SeccionViewModel
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+<i class="fa fa-book"></i> Formularios Registrados <span class="badge">@Model.objPaginacionModel.TotalElementos</span>
+@Html.Partial("~/Views/Shared/Paginacion/Pagina.cshtml", Model.objPaginacionModel)
+<table class="table">
+    <tr>
+        <th>
+            Formulario ID
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Descripción
+        </th>
+    </tr>
+    @foreach (var item in Model.lstSeccionModel)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSeccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreSeccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoSeccion)
+            </td>
+            <td>
+                <div class="form-group">
+                    <div class="btn-group">
+                        @Html.HiddenFor(modelItem => item.IdSeccion, new { @Id = "hdfIdSeccionRow" })
+                        <button type="button" class="btn btn-default" id="btnEditar" title="Editar"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+    }
+</table>
+@Html.Partial("~/Views/Shared/Paginacion/Pagina.cshtml", Model.objPaginacionModel)

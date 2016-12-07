@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Bandeja api</h2>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        <input type="button" class="btn btn-success" value="Buscar" id="btnBuscar" /> 
+        <div id="gridContainer"></div>
+        @*<div id="gridContainer2"></div>*@
+    </div>
+</div>
+
+@section Scripts{
+    <!-- plugin grid -->
+    <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/16.1.4/js/dx.all.js"></script>
+    <link href="~/Scripts/Common/Dx/Content/dx.common.css" rel="stylesheet" />
+    <link href="~/Scripts/Common/Dx/Content/dx.light.css" rel="stylesheet" />
+    <!-- plugin nzBandeja -->
+    <script src="~/Scripts/Common/Nz/nzBandejaPaginacion.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.js"></script>
+    <script src="~/Scripts/Common/Nz/nzBandeja.Grid.js"></script>
+    <script>
+        $(document).on("click", "#btnBuscar", function (event) {
+            var filtros = [
+                        { nomnbre: 'AreaProceso', valor: 'a' }
+            ];
+            $('#gridContainer').nzBandeja({ Action: 'http://localhost:64632/api/grid/GetBandeja', UUID: "EBD98B5F-1962-45AD-898D-7602C76D35B4", filtros: filtros, RegistrosPorPagina: 6 });
+        });
+    </script>
+}

@@ -1,0 +1,172 @@
+﻿@model webControles.Models.Views.ConfigurarActividadViewModel
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div id="divBusqueda" class="row">
+                <div class="col-xs-12 col-md-12">
+
+                    <div class="input-group ">
+                        @Html.TextBox("TextoBusqueda", null, new { @placeholder = "Buscar", @class = "form-control", @id = "txtTextoBusqueda" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" id="btnBuscar" title="Buscar"> <span class="glyphicon glyphicon-search"></span> </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <div id="divLista">
+                @Html.Partial("~/Views/ConfigurarActividad/Lista.cshtml", Model)
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <div style="margin-bottom: 10px;">
+                        <button type="button" class="btn btn-default" id="btnNuevo"><i class="glyphicon glyphicon-plus"></i> Nuevo</button>
+                        <button type="submit" class="btn btn-default" id="btnGuardar"><i class="glyphicon glyphicon-floppy-disk"></i> Guardar</button>
+                        <button type="button" class="btn btn-default" id="btnCancelar"><i class="glyphicon glyphicon-chevron-left"></i>  Cancelar</button>
+                    </div>
+
+                    <ul class="nav nav-tabs" data-tabs="tabs" id="ulTabBandeja">
+                        <li id="liProceso" class="active"><a href="#Proceso" data-toggle="tab">Proceso</a></li>
+                        <li id="liConfiguracion"><a href="#Configuracion" data-toggle="tab">Configuracion</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="Proceso">
+                            @Html.Partial("~/Views/ConfigurarActividad/Proceso.cshtml", Model.objEncProcesoModel)
+                        </div>
+                        <div class="tab-pane" id="Configuracion">
+                            @Html.Partial("~/Views/ConfigurarActividad/Configuracion.cshtml")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+
+    <script src="~/Scripts/Controllers/ConfigurarActividadController.js"></script>
+    <script src="~/Scripts/Services/ConfigurarActividadService.js"></script>
+
+    <script src="~/Scripts/Common/messageCommon.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+
+    <script>
+        (function() {
+
+            var objConfigurarActividadController = new ConfigurarActividadController();
+
+            objConfigurarActividadController.CambioPagina();
+            objConfigurarActividadController.ActivarControles(false);
+
+            objConfigurarActividadController
+                .ActividadXTipo('@Url.Action("obtenerActividadesXTipo", "ConfigurarActividad")');
+
+
+            $(document)
+                .on('click',
+                    '#btnBuscar',
+                    function() {
+                        //obtiene la url para cargar el listado, en esta url se le suma el Filtro de la Busqueda
+                        var url = '@Url.Action("Lista", "ConfigurarActividad")' +
+                            '?TextoBuscar=' +
+                            $('#txtTextoBusqueda').val();
+                        objConfigurarActividadController.Buscar(url);
+                    });
+
+            $(document)
+                .on("click",
+                    "#btnListaEditar",
+                    function() {
+                        var url = '@Url.Action("CargarXId", "ConfigurarActividad")';
+                        var datos = {
+                            "IdEncProceso": $(this).parent().find('input[id=hdfIdEncProcesoRow]').val()
+                        };
+                        //alert($(this).parent().find('input[id=hdfIdEncProcesoRow]').val())
+                        objConfigurarActividadController.CargarXId(url, datos);
+                        $("#configuracionBtnActualizar").css("display", 'none');
+                        $("#configuracionBtnCancelar").css("display", 'none');
+                        $("#configuracionBtnAgregar").show();
+                    });
+
+            $(document)
+                .on("click",
+                    "#btnConfigEdit",
+                    function() {
+                        var idEncActividad = $(this).parent().find('input[id=idEncActividad]').val();
+                        var idDetActividad = $(this).parent().find('input[id=idDetActividad]').val();
+                        var idTipoProceso = $(this).parent().find('input[id=idTipoProceso]').val();
+                        var idEncProceso = $(this).parent().find('input[id=idEncProceso]').val();
+                        var idEncActividadSiguiente = $(this).parent().find('input[id=idEncActividadSiguiente]').val();
+                        var idArray = $(this).parent().find('input[id=idArray]').val();
+
+                        objConfigurarActividadController
+                            .configEditar(idEncActividad, idEncActividadSiguiente, idDetActividad);
+                    });
+
+            $(document)
+                .on("click",
+                    "#btnConfigRemove",
+                    function() {
+                        $(this).parent().parent().remove();
+                        objConfigurarActividadController
+                            .Eliminar($(this).parent().find('input[id=idDetActividad]').val(), true);
+                    });
+
+            $(document)
+                .on("click",
+                    "#btnCancelar",
+                    function() {
+                        objConfigurarActividadController.Cancelar();
+                    });
+
+            $(document)
+                .on("click",
+                    "#btnNuevo",
+                    function() {
+                        objConfigurarActividadController.Nuevo();
+                    });
+
+            $(document)
+                .on("click",
+                    "#configuracionBtnAgregar",
+                    function() {
+                        objConfigurarActividadController.AgregarDatosTabla(true);
+                    });
+            $(document)
+                .on("click",
+                    "#btnGuardar",
+                    function() {
+                        objConfigurarActividadController.Guardar('@Url.Action("Guardar", "ConfigurarActividad")',
+                            '@Url.Action("Lista", "ConfigurarActividad")');
+                    });
+
+            $(document)
+                .on("click",
+                    "#configuracionBtnCancelar",
+                    function() {
+                        $("#configuracionBtnActualizar").css("display", 'none');
+                        $("#configuracionBtnCancelar").css("display", 'none');
+                        $("#configuracionBtnAgregar").show();
+                    });
+
+            $(document)
+                .on("click",
+                    "#configuracionBtnActualizar",
+                    function() {
+                        var idSelected = $("#idSelected").val();
+                        objConfigurarActividadController.Eliminar(idSelected, false);
+                        $("#configuracionBtnActualizar").css("display", 'none');
+                        $("#configuracionBtnCancelar").css("display", 'none');
+                        $("#configuracionBtnAgregar").show();
+                    });
+        })();
+    </script>
+}

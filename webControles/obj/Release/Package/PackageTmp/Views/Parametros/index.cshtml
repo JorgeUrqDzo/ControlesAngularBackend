@@ -1,0 +1,109 @@
+﻿@*@{
+        ViewBag.Title = "Parametros";
+    }*@
+@model webControles.Models.Views.ParametrosViewModel
+<div class="modal" id="ModalAltaParametros" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Alta de Parametros</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @using (Html.BeginForm("index", "Parametros", FormMethod.Post, new { id = "frmParametros" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        <div class="col-lg-4">
+
+                            @Html.HiddenFor(model => model.objParametrosModel.IdDetConfBandejaLinkParametro, new { @Value = "0", id = "IdDetConfBandejaLinkParametro" })
+
+                            @Html.LabelFor(model => model.objParametrosModel.Parametro)
+                            @Html.TextBoxFor(model => model.objParametrosModel.Parametro, new { @class = "form-control", @placeholder = "Nombre ", @id = "txtParametroNombre" })
+                            @Html.ValidationMessageFor(model => model.objParametrosModel.Parametro, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.LabelFor(model => model.objParametrosModel.IdTipoParametro)
+                            @Html.DropDownListFor(model => model.objParametrosModel.IdTipoParametro, new SelectList(ViewBag.lstTipoParametro, "Llave", "Titulo"), new { @class = "form-control", @placeholder = "Tipo Parametro ", @id = "txtParametroTipo" })
+                            @Html.ValidationMessageFor(model => model.objParametrosModel.IdTipoParametro, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="col-lg-4">
+                            @Html.LabelFor(model => model.objParametrosModel.Valor)
+                            @Html.TextBoxFor(model => model.objParametrosModel.Valor, new { @class = "form-control", @placeholder = "Valor ", @id = "txtParametroValor" })
+                            @Html.ValidationMessageFor(model => model.objParametrosModel.Valor, null, new { @class = "text-danger" })
+                        </div>
+
+                        <div class="col-lg-4">
+                            <br />
+                            @Html.LabelFor(model => model.objParametrosModel.IdTipoEnvioParametro)
+                            @Html.DropDownListFor(model => model.objParametrosModel.IdTipoEnvioParametro, new SelectList(ViewBag.lstTipoEnvio, "Llave", "Titulo"), new { @class = "form-control", @placeholder = "TipoEnvio ", @id = "txtParametroTipoEnvio" })
+                            @Html.ValidationMessageFor(model => model.objParametrosModel.IdTipoEnvioParametro, null, new { @class = "text-danger" })
+
+                        </div>
+                    }
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <div class="col-lg-12">
+                    <button type="button" id="btnParametroModalAceptar" class="btn btn-primary">Aceptar</button>
+                    <button type="button" id="btnParametroModalCancelar" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ <br />
+<div class="row">
+    <div class="col-lg-2">
+        <button id="btnAgregar" class="btn btn-primary form-control" data-toggle="modal" data-target="#ModalAltaParametros">
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+    </div>
+    @*<div class="col-lg-3 pull-right">
+        <button class="btn btn-success form-control" id="bandejaColumnaBtnSiguiente">Siguiente</button>
+    </div>*@
+    <div class="col-lg-3 pull-right">
+        <button class="btn btn-danger form-control" id="bandejaColumnaBtnRegresar">Atras</button>
+    </div>
+    <br />
+    <br />
+    @*<div class="col-lg-1"></div>
+    <div class="col-lg-10 panel">*@
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+            <tr class="text-center">
+                <th>Nombre</th>
+                <th>Valor</th>
+                <th>Tipo Parametros</th>
+                <th>Opciones</th>
+            </tr>
+            </thead>
+            <tbody id="tablaParametros">
+            @*@foreach (var item in Model.lstParametrosModel)
+                {
+                    <tr data-id="@Html.DisplayFor(modelItem => item.IdDetConfBandejaLinkParametro)">
+                        <td>@Html.DisplayFor(modelItem => item.Parametro)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Valor)</td>
+                        <td>@Html.DisplayFor(modelItem => item.IdTipoParametro)</td>
+                        <td>
+                            @Html.HiddenFor(modelItem => item.IdEncConfBandeja, new { @id = "IdEncConfBandeja" })
+                            <input type="button" id="btnEditarParametro" value="Editar" class="btn btn-success" />
+                            <input type="button" id="btnEliminarParametro" value="Eliminar" class="btn btn-danger" />
+                        </td>
+                    </tr>
+                }*@
+
+            </tbody>
+        </table>
+        </div>
+    @*</div>
+    <div class="col-lg-1"></div>*@
+</div>
+

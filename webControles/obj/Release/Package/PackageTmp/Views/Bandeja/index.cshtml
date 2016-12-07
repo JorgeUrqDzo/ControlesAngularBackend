@@ -1,0 +1,72 @@
+﻿@model webControles.Models.BandejaModel
+
+@using (Html.BeginForm("Bandeja", "Bandeja", FormMethod.Post, new { id = "frmBandeja" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.HiddenFor(model => model.IdEncConfBandeja, new { @Value = "0", id = "idForm" })
+
+            @Html.LabelFor(model => model.Nombre)
+            @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", @placeholder = "Nombre ", @id = "txtBandejaNombre", @disabled = true})
+            @Html.ValidationMessageFor(model => model.Nombre, null, new { @class = "text-danger" })
+        </div>
+        <div class="col-lg-6">
+            @Html.LabelFor(model => model.Descripcion)
+            @Html.TextBoxFor(model => model.Descripcion, new { @class = "form-control", @placeholder = "Descripcion ", @id = "txtBandejaDescripcion", @disabled = true })
+            @Html.ValidationMessageFor(model => model.Descripcion, null, new { @class = "text-danger" })
+        </div>
+        <div>
+            <div class="col-lg-3">
+                <br/>
+                @Html.LabelFor(model => model.NumeroPaginas)
+                @Html.TextBoxFor(model => model.NumeroPaginas, new { @class = "form-control", @placeholder = "# paginas ", @id = "txtBandejaNumeroPaginas", @disabled = true })
+                @Html.ValidationMessageFor(model => model.NumeroPaginas, null, new {@class = "text-danger"})
+            </div>
+
+            <div class="col-lg-9">
+                <br/>
+                @Html.LabelFor(model => model.ClaseBandeja)
+                @Html.TextBoxFor(model => model.ClaseBandeja, new { @class = "form-control", @placeholder = "form-control", @id = "txtClaseBandeja", @disabled = true })
+            </div>
+
+        </div>
+
+        <div class="col-lg-12">
+            <br/>
+            @Html.LabelFor(model => model.IdFormulario)
+            @Html.DropDownListFor(model => model.IdFormulario, new SelectList(ViewBag.tipoFormulario, "Llave", "Titulo"), null, new { @class = "form-control", @id = "txtIdTipoFormularioEncConfBandeja", @disabled = true })
+            @Html.ValidationMessageFor(model => model.IdFormulario, null, new {@class = "text-danger"})
+        </div>
+
+        <div class="col-lg-12">
+            <br/>
+            @*<label class="control-label">Elija el tipo de consulta: </label><br />
+            <select class="form-control" id="selTipoConsulta">
+                <option value="1">Consulta/Texto</option>
+                <option value="2">StoreProcedure</option>
+            </select>*@
+            @Html.LabelFor(model => model.IdTipoConsulta)
+            @Html.DropDownListFor(model => model.IdTipoConsulta, new SelectList(ViewBag.tipoConsulta, "Llave", "Titulo"), null, new { @class = "form-control", @id = "selTipoConsulta", @disabled = true })
+            @Html.ValidationMessageFor(model => model.IdTipoConsulta, null, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-lg-12">
+            <br />
+            @Html.LabelFor(model => model.Consulta)
+            @Html.TextAreaFor(model => model.Consulta, 4, 5, new { @class = "form-control", @placeholder = "Consulta o llamada a Store Procedure SQL ", @id = "txtAreaBandejaConsulta", @disabled = true })
+            @Html.ValidationMessageFor(model => model.Consulta, null, new { @class = "text-danger" })
+            <br />
+        </div>
+
+
+        <div class="col-lg-12">
+            <br />
+            <input type="button" id="btnBandejaProbar" value="Probar SQL" class="btn btn-primary" />
+            <input type="button" id="btnBandejaSiguiente" value="Siguiente" class="btn btn-success" />
+        </div>
+
+    </div>
+}

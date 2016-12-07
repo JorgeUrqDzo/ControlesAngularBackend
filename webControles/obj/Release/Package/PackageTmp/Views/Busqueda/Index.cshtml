@@ -1,0 +1,505 @@
+﻿@using webControles.Helpers
+@model webControles.Models.Views.BusquedaBandejaViewModel
+
+@{
+    ViewBag.Title = "BANDEJAS CREADAS";
+}
+
+
+<div id="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <div id="divBusqueda" class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="input-group">
+                                @Html.TextBox("TextoBuscar", null, new { @placeholder = "Buscar", @class = "form-control", @id = "txtTextoBuscar" })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary" id="btnBuscar" title="Buscar"> <span class="glyphicon glyphicon-search"></span> </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12">
+                            <div id="divLista">
+                                @Html.Partial("~/Views/Busqueda/Lista.cshtml", Model)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel">
+                <div class="panel-body">
+                    <div style="margin-bottom: 10px;">
+                        <button type="button" class="btn btn-default" id="btnNuevo"><i class="glyphicon glyphicon-plus"></i> Nuevo</button>
+                        <button type="button" class="btn btn-default" id="btnGuardar" style="display:none"><i class="glyphicon glyphicon-floppy-disk"></i> Guardar</button>
+                        <button type="button" class="btn btn-default" id="btnCancelar" style="display: none"><i class="glyphicon glyphicon-chevron-left"></i> Cancelar</button>
+                        <input type="hidden" id="varIdEncConfBandeja" value="0" />
+                        <input type="hidden" id="varIdTipoConsulta" value="0" />
+                    </div>
+
+                    <ul class="nav nav-tabs" data-tabs="tabs" id="ulTabBandeja">
+                        <li class="active disabled"><a href="#consulta" class="disabled" data-toggle="tab">Consulta</a></li>
+                        <li class="disabled"><a href="#columna" class="disabled" data-toggle="tab">Columnas</a></li>
+                        <li class="disabled"><a href="#parametros" class="disabled" data-toggle="tab">Parametros</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="consulta">
+                            @Html.Partial("~/Views/Bandeja/index.cshtml", Model.objBandejaModel)
+                            @*@Html.Action("index", "Bandeja")*@
+                        </div>
+                        <div class="tab-pane" id="columna">
+                            <div id="divListaBandeja">
+                                @Html.Partial("~/Views/BandejaColumna/ListaBandejaColumna.cshtml", Model)
+                            </div>
+                            @*@Html.Action("ListaBandejaColumna", "BandejaColumna")*@
+                        </div>
+                        <div class="tab-pane" id="parametros">
+                            <div id="divParametors">
+                                @Html.Partial("~/Views/Parametros/index.cshtml", Model.parametrosViewModel)
+                                @*<h1>Parametros</h1>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Scripts/Controllers/paginaController.js"></script>
+    <script src="~/Scripts/Common/messageCommon.js"></script>
+
+    <script src="~/Scripts/Controllers/busquedaController.js"></script>
+    <script src="~/Scripts/Services/busquedaService.js"></script>
+
+    <script src="~/Scripts/Services/encConfBandejaService.js"></script>
+    <script src="~/Scripts/Controllers/encConfBandejaController.js"></script>
+
+    <script src="~/Scripts/Services/bandejaColumnaService.js"></script>
+    <script src="~/Scripts/Controllers/BandejaColumnaController.js"></script>
+    <script src="~/Scripts/Services/BandejaFiltrosService.js"></script>
+    <script src="~/Scripts/Controllers/BandejaFiltrosController.js"></script>
+    <script src="~/Scripts/Services/ParametrosService.js"></script>
+    <script src="~/Scripts/Controllers/ParametrosController.js"></script>
+
+
+    <script>
+    (function () {
+        var objBusquedaController = new BusquedaController();
+        var objBandejaController = new EncConfBandejaController();
+        var objBandejaColumnaController = new BandejaColumnaController();
+        var objParametrosController = new ParametrosController();
+
+        var id = 0;
+        var indiceTabs = 0;
+
+        //Bloquear Tabs
+        $(".nav-tabs a[data-toggle=tab]")
+            .on("click",
+                function (e) {
+                    if ($(this).hasClass("disabled")) {
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+
+        objBandejaController.LimpiarCampos(false);
+
+        $(document)
+            .on('click',
+                '#btnBuscar',
+                function (event) {
+                    //cancela el evento del click
+                    event.preventDefault();
+                    //obtiene la url para cargar el listado, en esta url se le suma el Filtro de la Busqueda
+                    var url = '@Url.Action("Lista", "Busqueda")' + '?TextoBuscar=' + $('#txtTextoBuscar').val();
+                    objBusquedaController.Buscar(url);
+                });
+
+        $(document)
+            .on('click',
+                '#btnEditarBusqueda',
+                function () {
+                    indiceTabs = 0;
+                    $($('#ulTabBandeja a')[0]).tab('show');
+                    var varId = $(this).parent().find('input[id=hdfEncConfBandejaBusqueda]').val();
+                    $("#varIdEncConfBandeja").val(varId);
+                    var url = '@Url.Action("Editar", "Bandeja")';
+                    objBandejaController.Editar(varId, url);
+                    //Carga la informacion de la bandeja
+                    var urlColumna = '@Url.Action("ListaBandejaColumna", "BandejaColumna")' + '/' + varId;
+                    objBandejaColumnaController.Cargar(urlColumna);
+                });
+
+        //Inicializa la función cambio de pagina
+        objBusquedaController.CambioPagina();
+
+        $(document)
+            .on("click",
+                "#btnBandejaProbar",
+                function (event) {
+                    var resultado = objBandejaController.ProbarConsulta('@Url.Action("ValidarSQL", "Bandeja")');
+                });
+
+        $(document)
+            .on("click",
+                "#btnBandejaSiguiente",
+                function () {
+                    objBandejaController.InsertarFormulario('@Url.Action("InsertarFormulario", "Bandeja")',
+                        '@Url.Action("ValidarSQL", "Bandeja")', indiceTabs, function () {
+                            indiceTabs++;
+                        });
+
+                    objBandejaColumnaController.CargarLista('@Url.Action("ListaBandejaColumna", "BandejaColumna")',
+                        $("#varIdEncConfBandeja").val());
+
+                });
+        $(document)
+            .on("click",
+                "#bandejaColumnaBtnSiguiente",
+                function () {
+
+                    $($('#ulTabBandeja a')[++indiceTabs]).tab('show');
+
+                    objParametrosController.CargarParametrosXIdEncConfBandeja('@Url.Action("CargarParametros", "Parametros")', $("#varIdEncConfBandeja").val());
+
+                });
+
+        $(document)
+            .on("click",
+                "#bandejaColumnaBtnRegresar",
+                function () {
+                    $($('#ulTabBandeja a')[--indiceTabs]).tab('show');
+
+                });
+
+        $(document)
+            .on("click",
+                "#btnNuevo",
+                function (event) {
+                    //Limpia campos para insertar nuevo
+                    objBandejaController.LimpiarCampos(true);
+                    //Pone el tab en la primera posicion
+                    $('#btnNuevo').hide();
+                    $('#btnCancelar').show();
+                    $($('#ulTabBandeja a')[0]).tab('show');
+                    $("#varIdEncConfBandeja").val(0);
+
+                });
+
+        $(document)
+            .on("click",
+                "#btnCancelar",
+                function () {
+                    //Limpia campos para insertar nuevo
+                    objBandejaController.LimpiarCampos(false);
+                    //Pone el tab en la primera posicion
+                    $('#btnNuevo').show();
+                    $('#btnCancelar').hide();
+                    $($('#ulTabBandeja a')[0]).tab('show');
+                    indiceTabs = 0;
+                    $("#varIdEncConfBandeja").val(0);
+                });
+
+        $(document)
+            .on("click",
+                "#btnBandejaColumnaModalAceptar",
+                function (event) {
+                    var urlBusqueda = '@Url.Action("ListaBandejaColumna", "BandejaColumna")';
+                    var action = "";
+
+                    if ($("#createBandejaColumnaValidarEditar").val() == 1) {
+                        action = '@Url.Action("Edit", "BandejaColumna")';
+                    } else {
+                        action = '@Url.Action("Create", "BandejaColumna")';
+                    }
+
+                    objBandejaColumnaController.Guardar(action, urlBusqueda);
+                });
+
+        //$(document)
+        //    .on("click",
+        //        "#TableBandejas > tbody > tr",
+        //        function () {
+        //            arr.push(
+        //                registro = {
+        //                    ahora: "",
+        //                    despues: ""
+        //                });
+        //            console.log("DATA ID => " +$(this).attr("data-id"));
+        //            console.log("ID => " + $(this).attr("id"));
+        //        });
+
+        $(document)
+            .on("click", "#subirOrden",
+                function () {
+
+                    var id = $(this).parent().parent().attr('id');
+                    var ordenActual = $(this).parent().parent().attr('data-id');
+                    var ordenNuevo = parseInt(ordenActual) - 1;
+                    if (parseInt(ordenActual) > 1) {
+                        objBandejaColumnaController
+                            .cambiarOrden('@Url.Action("CambiarOrden", "BandejaColumna")',
+                                id,
+                                ordenNuevo,
+                                '@Url.Action("ListaBandejaColumna", "BandejaColumna")');
+                    }
+//                    else alert("estas en la primera posicion");
+                });
+
+        $(document)
+            .on("click", "#bajarOrden",
+                function () {
+                    var id = $(this).parent().parent().attr('id');
+                    var ordenActual = $(this).parent().parent().attr('data-id');
+                    var ordenNuevo = parseInt(ordenActual) + 1;
+                    var numRegistros = $("#hdfNumRegistros").val();
+
+                    if(parseInt(ordenActual)< parseInt(numRegistros))
+                    objBandejaColumnaController
+                            .cambiarOrden('@Url.Action("CambiarOrden", "BandejaColumna")', id, ordenNuevo, '@Url.Action("ListaBandejaColumna", "BandejaColumna")');
+//                    else alert("estas en la ultima posicion");
+                });
+
+        function Accion(TipoAccion) {
+            var urlBusqueda = '@Url.Action("ListaBandejaColumna", "BandejaColumna")';
+            switch (TipoAccion) {
+                case "Agregar":
+                case "Editar":
+                    objBandejaColumnaController.Guardar('@Url.Action("Edit", "BandejaColumna")', urlBusqueda);
+                    break;
+                case "Eliminar":
+                    objBandejaColumnaController.Eliminar('@Url.Action("Delete", "BandejaColumna")');
+                    break;
+            }
+        }
+
+        $(document)
+            .on("click",
+                "#btnAgregar",
+                function () {
+                    nzSwitch.SetNzSwitch();
+                    $("#createBandejaTipoLink").bootstrapSwitch("state", false);
+                    //obtener json con nombre de las columnas
+                    objEncConfBandejaController = new EncConfBandejaController();
+                    //obtener id EncConfBandeja
+                    var id = $("#varIdEncConfBandeja").val();
+                    //url para obtener nombre columnas
+                    var url = '@Url.Action("getColumnas", "bandeja")';
+
+                    if ($("#varIdTipoConsulta").val() == "1") {
+                        $("#divTipoConsulta")
+                            .html(
+                                '<select class="form-control" id="createBandejaColumnaSelect"></select>'
+                            );
+                    } else if ($("#varIdTipoConsulta").val() == "2") {
+                        $("#divTipoConsulta")
+                            .html(' <input class="form-control" type="text" id="createBandejaColumnaSelect"></input>');
+                    }
+
+
+                    objEncConfBandejaController.getColumnas(id, url);
+
+                });
+
+        $(document)
+            .on("click",
+                "#eliminarBtnBandejaColumna",
+                function () {
+                    var varId = $(this).parent().find('input[id=listaBandejaColumnaIdDetConfBandejaColumna]').val();
+                    var urlBusqueda = '@Url.Action("ListaBandejaColumna", "BandejaColumna")';
+                    objBandejaColumnaController.Eliminar('@Url.Action("Delete", "BandejaColumna")',
+                        varId,
+                        urlBusqueda);
+                });
+        $(document)
+            .on("click",
+                "#editarBtnBandejaColumna",
+                function () {
+                    nzSwitch.SetNzSwitch();
+                    if ($("#varIdTipoConsulta").val() == "1") {
+                        $("#divTipoConsulta")
+                            .html(
+                                '<select class="form-control" id="createBandejaColumnaSelect"></select>'
+                            );
+                    } else if ($("#varIdTipoConsulta").val() == "2") {
+                        $("#divTipoConsulta")
+                            .html(' <input class="form-control" type="text" id="createBandejaColumnaSelect"></input>');
+                    }
+
+                    var varId = $(this).parent().find('input[id=listaBandejaColumnaIdDetConfBandejaColumna]').val();
+                    objBandejaColumnaController.Editar('@Url.Action("Edit", "BandejaColumna")', varId);
+                    //obtener json con nombre de las columnas
+                    objEncConfBandejaController = new EncConfBandejaController();
+                    //obtener id EncConfBandeja
+                    var id = $("#varIdEncConfBandeja").val();
+                    //url para obtener nombre columnas
+                    var url = '@Url.Action("getColumnas", "bandeja")';
+                    objEncConfBandejaController.getColumnas(id, url);
+                    $("#createBandejaColumnaValidarEditar").val(1);
+                });
+        $(document)
+            .on('click',
+                '#btnObtenerUUID',
+                function (event) {
+                    varId = $(this).closest('tr').find('input[id=hdfEncConfBandejaUUID]').val();
+                    //alert(varId);
+
+                    $("#pModalUUID").html(varId);
+                });
+
+        $(document)
+            .on("click",
+                "#btnBandejaColumnaModalCancelar",
+                function () {
+                    $("#createBandejaColumnaValidarEditar").val(0);
+                    $("#createBandejaTipoLink").bootstrapSwitch("state", false);
+
+                });
+
+        $(document)
+           .on("change", "#selTipoConsulta",
+               function () {
+                   if ($("#selTipoConsulta").val() != undefined) {
+                       $("#txtAreaBandejaConsulta").attr("disabled", false);
+                   } else {
+                       $("#txtAreaBandejaConsulta").attr("disabled", true);
+
+                   }
+
+               });
+
+        // ------------ METODOS PartialView Parametros ---------------
+        $(document)
+            .on("click",
+                "#btnParametroModalAceptar",
+                function () {
+                    var datosModal = {
+                        IdDetConfBandejaLinkParametro: $("#IdDetConfBandejaLinkParametro").val(),
+                        Parametro: $("#txtParametroNombre").val(),
+                        Valor: $("#txtParametroValor").val(),
+                        IdTipoParametro: $("#txtParametroTipo").val(),
+                        IdTipoEnvioParametro: $("#txtParametroTipoEnvio").val(),
+                        IdUsuarioCreacion: 1,
+                        IdUsuarioModificacion: 1,
+                        //IdDetConfBandejaColumna: 111
+                        IdEncConfBandeja: $("#varIdEncConfBandeja").val()
+                    };
+
+                    objParametrosController.Insertar('@Url.Action("AgregarParametros", "Parametros")', datosModal, '@Url.Action("CargarParametros", "Parametros")', $("#varIdEncConfBandeja").val());
+
+                });
+
+        $(document)
+            .on("click",
+                "#btnEliminarParametro",
+                function () {
+                    var datos = {
+                        IdDetConfBandejaLinkParametro: $(this).closest("tr").data("id")
+                    };
+
+                    objParametrosController.Eliminar('@Url.Action("EliminarParametro", "Parametros")', datos, '@Url.Action("CargarParametros", "Parametros")', $("#varIdEncConfBandeja").val());
+                });
+
+        $(document)
+            .on("click",
+                "#btnEditarParametro",
+                function () {
+
+                    var datos = {
+                        IdDetConfBandejaLinkParametro: $(this).closest("tr").data("id")
+                    };
+
+                    objParametrosController.CargarXId('@Url.Action("CargarParametroXId", "Parametros")', datos, '@Url.Action("ListaBandejaColumna", "BandejaColumna")',
+                        $("#varIdEncConfBandeja").val());
+                });
+
+    })();
+
+
+    @*$("#btnAgregar").click(function () {
+            TipoAccion = "Agregar";
+            objBandejaColumnaController.VaciarCampos();
+            objBandejaColumnaController.cssShadow(TipoAccion + " columna", TipoAccion, false);
+        });
+        $(".editarBtnBandejaColumna").click(function () {
+            id = $(this).data('id');
+            TipoAccion = "Editar";
+            objBandejaColumnaController.Editar('@Url.Action("Edit", "BandejaColumna")' + '/' + id, id, "BandejaColumna");
+            return false;
+        });
+        $(".eliminarBtnBandejaColumna").click(function () {
+            id = $(this).data('id');
+            TipoAccion = "Eliminar";
+            objBandejaColumnaController.Editar('@Url.Action("Edit", "BandejaColumna")' + '/' + id, id, "BandejaColumna");
+            return false;
+        });
+        $("#btnBandejaColumnaModalAceptar").click(function () {
+            Accion(TipoAccion);
+        });
+        /*--------------funciones-------------*/
+        function Accion(TipoAccion) {
+            switch (TipoAccion) {
+                case "Agregar": BC.Guardar('@Url.Action("Create", "BandejaColumna")');
+                    break;
+                case "Editar": BC.Guardar('@Url.Action("Edit", "BandejaColumna")');
+                    break;
+                case "Eliminar": BC.Eliminar('@Url.Action("Delete", "BandejaColumna")');
+                    break;
+            }
+        }*
+
+    @*var BF = new BandejaFiltros();
+        var id = 0;
+        $("#btnAgregar").click(function () {
+            TipoAccion = "Agregar";
+            BC.VaciarCampos();
+            BC.cssShadow(TipoAccion + " filtro", TipoAccion, false);
+        });
+        $(".editarBtnBandejaColumna").click(function () {
+            id = $(this).data('id');
+            TipoAccion = "Editar";
+            BF.Editar('@Url.Action("Edit", "BandejaFiltros")' + '/' + id, id, "BandejaFiltro");
+            return false;
+        });
+        $(".eliminarBtnBandejaColumna").click(function () {
+            id = $(this).data('id');
+            TipoAccion = "Eliminar";
+            BF.Editar('@Url.Action("Edit", "BandejaFiltros")' + '/' + id, id, "BandejaFiltro");
+            return false;
+        });
+        $("#btnBandejaFiltroModalAceptar").click(function () {
+            Accion(TipoAccion);
+        });
+        /*--------------funciones-------------*/
+        function Accion(TipoAccion) {
+            switch (TipoAccion) {
+                case "Agregar": BF.Guardar('@Url.Action("Create", "BandejaFiltros")');
+                    break;
+                case "Editar": BF.Guardar('@Url.Action("Edit", "BandejaFiltros")');
+                    break;
+                case "Eliminar": BF.Eliminar('@Url.Action("Delete", "BandejaFiltros")');
+                    break;
+            }
+        }*@
+    </script>
+}
+
+
+
